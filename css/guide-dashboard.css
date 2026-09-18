@@ -1,0 +1,1073 @@
+/* ============================================
+   GUIDE DASHBOARD - Unique Design
+   Accent: Teal/green theme (distinct from traveler orange)
+   ============================================ */
+
+/* Guide-specific sidebar avatar */
+.guide-avatar {
+  background: var(--grad-accent) !important;
+  box-shadow: 0 4px 12px rgba(0,184,148,0.3) !important;
+}
+
+/* Guide sidebar uses accent gradient on active items */
+.sidebar-guide .sidebar-nav-item.active {
+  background: var(--grad-accent);
+  background-size: 200% auto;
+  box-shadow: 0 4px 18px rgba(0,184,148,0.4);
+}
+
+.sidebar-guide .sidebar-nav-item:hover i {
+  color: var(--accent-light);
+}
+
+.sidebar-guide .sidebar-nav-item.active .nav-badge {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Section title row */
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.section-title-row h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.date-pill {
+  background: var(--grad-accent);
+  background-size: 200% auto;
+  color: var(--white);
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   OVERVIEW MODULE
+   ============================================ */
+.guide-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+}
+
+.guide-today-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--neutral-200);
+  transition: all var(--transition);
+}
+
+.schedule-item:last-child { border-bottom: none; }
+.schedule-item:hover { padding-left: 0.5rem; }
+
+.schedule-time {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent-dark);
+  font-family: var(--font-heading);
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.schedule-content {
+  flex: 1;
+}
+
+.schedule-content strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--neutral-900);
+  margin-bottom: 0.15rem;
+}
+
+.schedule-content p {
+  font-size: 0.82rem;
+  color: var(--neutral-500);
+}
+
+.schedule-status {
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.schedule-status.ongoing {
+  background: rgba(39,174,96,0.12);
+  color: var(--success);
+}
+
+.schedule-status.upcoming {
+  background: rgba(0,184,148,0.12);
+  color: var(--accent-dark);
+}
+
+/* Guide side panel */
+.guide-side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.guide-reviews-card,
+.guide-cert-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+}
+
+.guide-reviews-card h3,
+.guide-cert-card h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.review-item {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+.review-item:last-child { border-bottom: none; }
+
+.review-stars i {
+  color: var(--warning);
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.review-item p {
+  font-size: 0.85rem;
+  color: var(--neutral-700);
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+.review-item span {
+  font-size: 0.78rem;
+  color: var(--neutral-500);
+  font-weight: 600;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0;
+  font-size: 0.88rem;
+  color: var(--neutral-700);
+  font-weight: 500;
+}
+
+.cert-item i {
+  color: var(--accent-dark);
+  font-size: 1.1rem;
+}
+
+/* ============================================
+   MY TOURS MODULE
+   ============================================ */
+.tours-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.tour-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+  transition: all var(--transition);
+  border-left: 4px solid var(--accent);
+}
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--secondary);
+}
+
+.tour-card-img {
+  height: 180px;
+  overflow: hidden;
+}
+
+.tour-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.tour-card:hover .tour-card-img img {
+  transform: scale(1.1);
+}
+
+.tour-card-body {
+  padding: 1.5rem;
+}
+
+.tour-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.tour-card-header h3 {
+  font-size: 1.1rem;
+  color: var(--neutral-900);
+  margin-bottom: 0.2rem;
+}
+
+.tour-card-header p {
+  font-size: 0.82rem;
+  color: var(--neutral-500);
+}
+
+.tour-card-header p i {
+  color: var(--accent-dark);
+  margin-right: 0.3rem;
+}
+
+.tour-status-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tour-status-badge.active {
+  background: rgba(39,174,96,0.12);
+  color: var(--success);
+}
+
+.tour-status-badge.draft {
+  background: rgba(241,196,15,0.15);
+  color: #c4a300;
+}
+
+.tour-card-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  background: var(--neutral-50);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+}
+
+.tour-card-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-card-stats span {
+  font-size: 0.7rem;
+  color: var(--neutral-500);
+}
+
+.tour-card-stats strong {
+  font-size: 0.88rem;
+  color: var(--neutral-900);
+}
+
+.tour-card-progress {
+  margin-bottom: 1rem;
+}
+
+.tour-progress-bar {
+  height: 8px;
+  background: var(--neutral-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+}
+
+.tour-progress-fill {
+  height: 100%;
+  background: var(--grad-accent);
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+.tour-card-progress span {
+  font-size: 0.78rem;
+  color: var(--neutral-500);
+  font-weight: 600;
+}
+
+.tour-card-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn-tour-manage,
+.btn-tour-roster,
+.btn-tour-publish {
+  flex: 1;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btn-tour-manage {
+  background: var(--grad-accent);
+  background-size: 200% auto;
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(0,184,148,0.25);
+}
+
+.btn-tour-manage:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+}
+
+.btn-tour-roster {
+  background: var(--neutral-100);
+  color: var(--neutral-700);
+}
+
+.btn-tour-roster:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-tour-publish {
+  background: var(--grad-secondary);
+  background-size: 200% auto;
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(230,126,34,0.25);
+}
+
+.btn-tour-publish:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   TRAVELERS MODULE
+   ============================================ */
+.travelers-table-wrap {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.travelers-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.travelers-table thead {
+  background: var(--grad-primary);
+}
+
+.travelers-table thead th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-heading);
+}
+
+.travelers-table tbody tr {
+  border-bottom: 1px solid var(--neutral-200);
+  transition: all var(--transition);
+}
+
+.travelers-table tbody tr:hover {
+  background: rgba(0,184,148,0.04);
+}
+
+.travelers-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.travelers-table td {
+  padding: 0.9rem 1.5rem;
+  font-size: 0.88rem;
+  color: var(--neutral-700);
+}
+
+.traveler-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.traveler-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.traveler-cell strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--neutral-900);
+}
+
+.traveler-cell span {
+  font-size: 0.76rem;
+  color: var(--neutral-500);
+}
+
+.traveler-status {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.traveler-status.confirmed {
+  background: rgba(39,174,96,0.12);
+  color: var(--success);
+}
+
+.traveler-status.pending {
+  background: rgba(241,196,15,0.15);
+  color: #c4a300;
+}
+
+.btn-traveler-action {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: var(--neutral-100);
+  color: var(--neutral-600);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  transition: all var(--transition);
+  margin-right: 0.3rem;
+}
+
+.btn-traveler-action:hover {
+  background: var(--accent);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   SCHEDULE MODULE
+   ============================================ */
+.schedule-calendar {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+  margin-bottom: 1.5rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-header h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.calendar-nav {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.cal-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--neutral-100);
+  color: var(--neutral-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all var(--transition);
+}
+
+.cal-nav-btn:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.4rem;
+}
+
+.cal-day-header {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--neutral-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 0;
+}
+
+.cal-day {
+  aspect-ratio: 1;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--neutral-700);
+  transition: all var(--transition);
+  cursor: pointer;
+  padding: 0.3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cal-day:hover {
+  background: var(--neutral-50);
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.cal-day.dim {
+  color: var(--neutral-300);
+  background: var(--neutral-50);
+}
+
+.cal-day.today {
+  background: var(--grad-accent);
+  color: var(--white);
+  font-weight: 800;
+  border-color: var(--accent-dark);
+}
+
+.cal-day.has-event {
+  background: rgba(0,184,148,0.06);
+  border-color: rgba(0,184,148,0.3);
+  font-weight: 600;
+}
+
+.cal-day.has-event.today {
+  background: var(--grad-accent);
+}
+
+.cal-event {
+  font-size: 0.55rem;
+  color: var(--accent-dark);
+  text-align: center;
+  margin-top: 0.15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.cal-day.has-event.today .cal-event {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Upcoming events list */
+.upcoming-events {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+}
+
+.upcoming-events h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.event-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--neutral-100);
+  transition: all var(--transition);
+}
+
+.event-row:last-child { border-bottom: none; }
+.event-row:hover { padding-left: 0.5rem; }
+
+.event-date {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--grad-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,184,148,0.25);
+}
+
+.event-day {
+  font-size: 1.3rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+
+.event-month {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-info {
+  flex: 1;
+}
+
+.event-info strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--neutral-900);
+}
+
+.event-info p {
+  font-size: 0.82rem;
+  color: var(--neutral-500);
+}
+
+.event-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(39,174,96,0.12);
+  color: var(--success);
+  text-transform: uppercase;
+}
+
+.event-badge.draft {
+  background: rgba(241,196,15,0.15);
+  color: #c4a300;
+}
+
+/* ============================================
+   EARNINGS MODULE
+   ============================================ */
+.earnings-chart-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+  margin-bottom: 1.5rem;
+}
+
+.chart-period-select {
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  color: var(--neutral-700);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.chart-period-select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.earnings-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 280px;
+  padding-top: 2rem;
+}
+
+.bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 100%;
+  max-width: 60px;
+  background: var(--grad-accent);
+  background-size: 200% auto;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  transition: all var(--transition);
+  position: relative;
+  min-height: 20px;
+  animation: barRise 1s ease;
+}
+
+@keyframes barRise {
+  from { height: 0 !important; }
+}
+
+.bar:hover {
+  background-position: right center;
+  filter: brightness(1.1);
+  transform: scaleY(1.03);
+  transform-origin: bottom;
+}
+
+.bar span {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--neutral-700);
+  white-space: nowrap;
+}
+
+.bar-col label {
+  font-size: 0.8rem;
+  color: var(--neutral-500);
+  font-weight: 600;
+}
+
+/* Earnings breakdown */
+.earnings-breakdown {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+}
+
+.earnings-breakdown h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.breakdown-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+.breakdown-item:last-child { border-bottom: none; }
+
+.breakdown-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.breakdown-info strong {
+  font-size: 0.9rem;
+  color: var(--neutral-900);
+}
+
+.breakdown-info span {
+  font-size: 0.78rem;
+  color: var(--neutral-500);
+}
+
+.breakdown-amount {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent-dark);
+  font-family: var(--font-heading);
+}
+
+.breakdown-bar {
+  height: 8px;
+  background: var(--neutral-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.breakdown-fill {
+  height: 100%;
+  background: var(--grad-accent);
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+/* ============================================
+   GUIDE PROFILE MODULE
+   ============================================ */
+.guide-profile-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+}
+
+.guide-profile-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+}
+
+.guide-profile-banner {
+  height: 100px;
+  background: var(--grad-accent);
+  background-size: 200% auto;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%,100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.guide-profile-avatar-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: -50px;
+}
+
+.guide-profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--grad-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  border: 4px solid var(--white);
+  box-shadow: 0 8px 25px rgba(0,184,148,0.3);
+}
+
+.guide-profile-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.guide-profile-info h3 {
+  font-size: 1.2rem;
+  color: var(--neutral-900);
+  margin-bottom: 0.2rem;
+}
+
+.guide-profile-role {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.guide-profile-rating {
+  font-size: 0.9rem;
+  color: var(--neutral-700);
+  margin-bottom: 1.2rem;
+}
+
+.guide-profile-rating i {
+  color: var(--warning);
+}
+
+.guide-profile-rating span {
+  color: var(--neutral-500);
+  font-size: 0.8rem;
+}
+
+.guide-profile-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  border-top: 1px solid var(--neutral-200);
+  border-bottom: 1px solid var(--neutral-200);
+  margin-bottom: 1.2rem;
+}
+
+.guide-profile-stats div { text-align: center; }
+
+.guide-profile-stats strong {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--accent-dark);
+  font-family: var(--font-heading);
+}
+
+.guide-profile-stats span {
+  font-size: 0.72rem;
+  color: var(--neutral-500);
+}
+
+.guide-profile-certs {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cert-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-full);
+  background: rgba(0,184,148,0.1);
+  color: var(--accent-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.cert-pill i {
+  font-size: 0.8rem;
+}
+
+/* Guide profile form */
+.guide-profile-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--neutral-200);
+}
+
+.guide-profile-form h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Reuse form styles from traveler dashboard */
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--neutral-700);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.65rem 1rem;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+  color: var(--neutral-700);
+  background: var(--white);
+  transition: all var(--transition);
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,184,148,0.1);
+}
+
+.btn-save-profile {
+  background: var(--grad-accent);
+  background-size: 200% auto;
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+  box-shadow: 0 6px 20px rgba(0,184,148,0.3);
+  margin-top: 0.5rem;
+}
+
+.btn-save-profile:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,184,148,0.4);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .guide-overview-grid { grid-template-columns: 1fr; }
+  .guide-profile-layout { grid-template-columns: 1fr; }
+  .tours-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .tours-list { grid-template-columns: 1fr; }
+  .form-row-2 { grid-template-columns: 1fr; }
+  .earnings-bar-chart { height: 200px; gap: 0.5rem; }
+  .bar span { font-size: 0.6rem; }
+  .calendar-grid { gap: 0.2rem; }
+  .cal-day { font-size: 0.7rem; }
+  .cal-event { display: none; }
+  .travelers-table { min-width: 600px; }
+}
