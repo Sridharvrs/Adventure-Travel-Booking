@@ -3248,7 +3248,7 @@ input {
   }
 
   .moment-five {
-    grid-column: span 2;
+    grid-column: span 1;
   }
 
   .testimonial-slider {
@@ -3591,4 +3591,151 @@ input {
   /* font-size: .75rem; */
   letter-spacing: 1.5px;
   text-transform: uppercase;
+}
+
+
+/* ============================================
+   WHY US - RESPONSIVE
+============================================ */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+
+  .why-us {
+    padding: 80px 30px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .why-card {
+    padding: 32px 28px;
+  }
+
+  .why-card h3 {
+    font-size: 21px;
+  }
+
+  .why-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+  .why-us {
+    padding: 65px 20px;
+  }
+
+  .why-us .section-header {
+    max-width: 600px;
+    margin: 0 auto 40px;
+  }
+
+  .why-us .section-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .why-us .section-subtitle {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .why-card {
+    padding: 30px 26px;
+  }
+
+  .why-card-number {
+    font-size: 12px;
+  }
+
+  .why-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 19px;
+  }
+
+  .why-card h3 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .why-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+
+  .why-card a {
+    font-size: 13px;
+  }
+
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+
+  .why-us {
+    padding: 55px 16px;
+  }
+
+  .why-us .section-header {
+    margin-bottom: 32px;
+  }
+
+  .why-us .section-title {
+    font-size: 27px;
+  }
+
+  .why-us .section-subtitle {
+    font-size: 13px;
+  }
+
+  .why-grid {
+    gap: 15px;
+  }
+
+  .why-card {
+    padding: 26px 22px;
+  }
+
+  .why-card-number {
+    font-size: 11px;
+  }
+
+  .why-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 17px;
+  }
+
+  .why-card h3 {
+    font-size: 18px;
+    margin-top: 17px;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .why-card a {
+    font-size: 12px;
+  }
+
 }
