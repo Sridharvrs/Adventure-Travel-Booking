@@ -1,0 +1,549 @@
+/* ==========================================
+   Stackly 404 PAGE
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+
+/* ==========================================
+   MAIN
+   ========================================== */
+
+.error-page {
+  position: relative;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(216, 180, 90, 0.10),
+      transparent 35%
+    ),
+    #10120f;
+
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   BACKGROUND ORBS
+   ========================================== */
+
+.error-orb {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.12;
+
+  pointer-events: none;
+}
+
+.orb-one {
+  top: -250px;
+  right: -150px;
+  background: #d8b45a;
+}
+
+.orb-two {
+  bottom: -300px;
+  left: -180px;
+  background: #58705d;
+}
+
+
+/* ==========================================
+   CONTENT
+   ========================================== */
+
+.error-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1100px, 92%);
+
+  padding: 35px 0 25px;
+}
+
+
+/* ==========================================
+   TOP
+   ========================================== */
+
+.error-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error-logo img {
+  width: 145px;
+  height: auto;
+  display: block;
+}
+
+.error-code-small {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* ==========================================
+   ADVENTURE VISUAL
+   ========================================== */
+
+.adventure-visual {
+  position: relative;
+
+  height: 390px;
+
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* Sun */
+
+.sun {
+  position: absolute;
+
+  top: 65px;
+
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+
+  background: #d8b45a;
+
+  opacity: 0.12;
+
+  box-shadow: 0 0 80px rgba(216, 180, 90, 0.25);
+}
+
+
+/* Mountains */
+
+.mountain {
+  position: absolute;
+
+  bottom: -50px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 260px solid transparent;
+  border-right: 260px solid transparent;
+  border-bottom: 330px solid;
+}
+
+.mountain-back {
+  left: 5%;
+
+  border-bottom-color: #1c211b;
+
+  transform: scale(1.2);
+}
+
+.mountain-mid {
+  right: 5%;
+
+  border-bottom-color: #191d18;
+
+  transform: scale(1.15);
+}
+
+.mountain-front {
+  left: 50%;
+  transform: translateX(-50%) scale(1.3);
+
+  border-bottom-color: #151914;
+}
+
+
+/* Snow-like mountain peaks */
+
+.mountain::after {
+  content: "";
+
+  position: absolute;
+
+  left: -70px;
+  top: 25px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 85px solid rgba(255, 255, 255, 0.055);
+}
+
+
+/* ==========================================
+   404 NUMBER
+   ========================================== */
+
+.error-number {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  font-size: clamp(120px, 18vw, 210px);
+  line-height: 1;
+
+  font-weight: 800;
+  letter-spacing: -15px;
+
+  color: rgba(255, 255, 255, 0.96);
+
+  text-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.error-number .zero {
+  color: #d8b45a;
+
+  text-shadow:
+    0 0 50px rgba(216, 180, 90, 0.18);
+}
+
+
+/* ==========================================
+   COMPASS
+   ========================================== */
+
+.compass {
+  position: absolute;
+
+  z-index: 7;
+
+  top: 75px;
+  right: 23%;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(216, 180, 90, 0.4);
+  border-radius: 50%;
+
+  background: rgba(15, 17, 14, 0.75);
+
+  color: #d8b45a;
+
+  font-size: 20px;
+
+  animation: compassFloat 4s ease-in-out infinite;
+}
+
+@keyframes compassFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+
+}
+
+
+/* ==========================================
+   TRAILS
+   ========================================== */
+
+.trail {
+  position: absolute;
+
+  z-index: 6;
+
+  width: 100px;
+  height: 2px;
+
+  background: #d8b45a;
+
+  opacity: 0.4;
+
+  transform-origin: left;
+}
+
+.trail-one {
+  left: 15%;
+  bottom: 95px;
+
+  transform: rotate(-25deg);
+}
+
+.trail-two {
+  right: 12%;
+  bottom: 120px;
+
+  transform: rotate(28deg);
+}
+
+
+/* ==========================================
+   MESSAGE
+   ========================================== */
+
+.error-message {
+  position: relative;
+  z-index: 10;
+
+  max-width: 650px;
+
+  margin: -35px auto 0;
+
+  text-align: center;
+}
+
+.error-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 15px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+
+  color: #d8b45a;
+}
+
+.error-eyebrow i {
+  font-size: 13px;
+}
+
+.error-message h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.08;
+
+  letter-spacing: -2.5px;
+}
+
+.error-message h1 span {
+  color: #d8b45a;
+}
+
+.error-message p {
+  max-width: 550px;
+
+  margin: 20px auto 30px;
+
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.58);
+}
+
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+.error-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.error-primary,
+.error-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.error-primary {
+  background: #d8b45a;
+  color: #111111;
+}
+
+.error-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(216, 180, 90, 0.2);
+}
+
+.error-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+}
+
+.error-secondary:hover {
+  border-color: #d8b45a;
+  color: #d8b45a;
+}
+
+.error-secondary i {
+  font-size: 11px;
+
+  transition: transform 0.3s ease;
+}
+
+.error-secondary:hover i {
+  transform: translateX(4px);
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.error-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 45px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.error-footer span:first-child {
+  color: #d8b45a;
+}
+
+.error-line {
+  width: 35px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .error-content {
+    width: 90%;
+    padding: 25px 0 20px;
+  }
+
+  .error-logo img {
+    width: 120px;
+  }
+
+  .error-code-small {
+    font-size: 9px;
+  }
+
+  .adventure-visual {
+    height: 290px;
+  }
+
+  .error-number {
+    font-size: 115px;
+    letter-spacing: -8px;
+    gap: 5px;
+  }
+
+  .compass {
+    top: 50px;
+    right: 10%;
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .mountain {
+    border-left-width: 180px;
+    border-right-width: 180px;
+    border-bottom-width: 230px;
+  }
+
+  .error-message {
+    margin-top: -15px;
+  }
+
+  .error-message h1 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+  }
+
+  .error-message p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .error-primary,
+  .error-secondary {
+    width: 100%;
+  }
+
+  .error-footer {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+}

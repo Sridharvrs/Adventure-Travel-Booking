@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Stackly</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+    
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="adventures.html">Adventures</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="login.html" class="navbar-login-btn">Login</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+      <i class="fas fa-xmark"></i>
+    </button>
+
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="adventures.html">Adventures</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+    <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Section 1: Hero -->
+  <section class="contact-hero">
+    <div class="contact-hero-bg">
+      <img src="images/img21.webp" alt="Hikers">
+    </div>
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content">
+      <span class="contact-tagline reveal">GET IN TOUCH</span>
+      <h1 class="reveal" style="transition-delay:0.1s">Let's Plan Your<br><span class="contact-accent">Next Adventure</span></h1>
+      <p class="reveal" style="transition-delay:0.2s">Questions, custom trips, group bookings — we're here to help you every step of the way.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: Contact Cards -->
+  <section class="contact-cards-section">
+    <div class="contact-cards-grid">
+      <div class="contact-info-card reveal" style="transition-delay:0s">
+        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h3>Visit Us</h3>
+        <p>123 Adventure Street<br>Denver, Colorado<br>80202, USA</p>
+      </div>
+      <div class="contact-info-card reveal" style="transition-delay:0.1s">
+        <div class="info-icon"><i class="fas fa-phone"></i></div>
+        <h3>Call Us</h3>
+        <p>+1 (555) 123-4567<br>+1 (555) 765-4321<br>Mon-Sat: 9AM - 7PM</p>
+      </div>
+      <div class="contact-info-card reveal" style="transition-delay:0.2s">
+        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email Us</h3>
+        <p>hello@Stackly.com<br>support@Stackly.com<br>bookings@Stackly.com</p>
+      </div>
+      <div class="contact-info-card reveal" style="transition-delay:0.3s">
+        <div class="info-icon"><i class="fas fa-comments"></i></div>
+        <h3>Live Chat</h3>
+        <p>Chat with our adventure<br>experts in real time<br>24/7 support available</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Contact Form -->
+  <section class="contact-form-section">
+    <div class="form-wrapper">
+      <div class="form-info reveal-left">
+        <span class="section-eyebrow">Send A Message</span>
+        <h2>Tell Us About<br>Your Dream Adventure</h2>
+        <p>Whether you're planning your first trek or your fiftieth dive, our team is ready to help you craft the perfect experience. Fill out the form and we'll get back to you within 24 hours.</p>
+        <div class="form-info-features">
+          <div class="form-info-feature">
+            <i class="fas fa-clock"></i>
+            <span>24-hour response guarantee</span>
+          </div>
+          <div class="form-info-feature">
+            <i class="fas fa-user-tie"></i>
+            <span>Dedicated adventure consultant</span>
+          </div>
+          <div class="form-info-feature">
+            <i class="fas fa-gift"></i>
+            <span>Free personalized itinerary</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-container reveal-right">
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="John" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')"  required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')"  required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+1 555 000 0000" oninput="this.value=this.value.replace(/[^0-9]/g,'')" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Adventure Type</label>
+            <select>
+              <option>General Inquiry</option>
+              <option>Hiking & Trekking</option>
+              <option>Water Sports & Diving</option>
+              <option>Paragliding & Skydiving</option>
+              <option>Desert Safari</option>
+              <option>Camping & Wildlife</option>
+              <option>Custom Trip</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea rows="5" placeholder="Tell us about your dream adventure..." required></textarea>
+          </div>
+          <button type="submit" class="form-submit-btn" id="contactSubmitBtn">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-success-msg" id="contactSuccess"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+<!-- Section 4: Find Us / Map Section -->
+<section class="map-section">
+
+  <div class="section-header reveal">
+    <span class="section-eyebrow">Find Us</span>
+    <h2 class="section-title">Visit Our Headquarters</h2>
+    <p class="section-subtitle">
+      Planning your next adventure? Come meet our team and start your journey with Stackly.
+    </p>
+  </div>
+
+  <div class="location-wrapper">
+
+    <!-- Location Details -->
+    <div class="location-details reveal-left">
+
+      <span class="location-tag">
+        <i class="fas fa-location-dot"></i>
+        Stackly HQ
+      </span>
+
+      <h3>Adventure starts<br>right here.</h3>
+
+      <p class="location-description">
+        Our headquarters is located in Denver, Colorado,
+        right at the gateway to the Rocky Mountains.
+        Drop by and let us help you plan your next unforgettable journey.
+      </p>
+
+      <div class="location-info">
+
+        <div class="location-item">
+          <div class="location-icon">
+            <i class="fas fa-location-dot"></i>
+          </div>
+
+          <div>
+            <span>Address</span>
+            <p>123 Adventure St,<br>Denver, CO 80202</p>
+          </div>
+        </div>
+
+        <div class="location-item">
+          <div class="location-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+
+          <div>
+            <span>Phone</span>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+
+        <div class="location-item">
+          <div class="location-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+
+          <div>
+            <span>Email</span>
+            <p>hello@Stackly.com</p>
+          </div>
+        </div>
+
+        <div class="location-item">
+          <div class="location-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+
+          <div>
+            <span>Opening Hours</span>
+            <p>Monday – Saturday<br>9:00 AM – 7:00 PM</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="contact.html" class="location-btn">
+        Get Directions
+        <i class="fas fa-arrow-right"></i>
+      </a>
+
+    </div>
+
+
+    <!-- Map -->
+    <div class="map-container reveal-zoom">
+
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-105.03%2C39.73%2C-104.98%2C39.76&layer=mapnik"
+        width="100%"
+        height="500"
+        loading="lazy"
+        title="Stackly Headquarters Map">
+      </iframe>
+
+      <div class="map-badge">
+        <i class="fas fa-location-dot"></i>
+
+        <div>
+          <strong>Stackly HQ</strong>
+          <span>Denver, Colorado</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- Section 5: FAQ -->
+  <section class="faq-section">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Got Questions?</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Everything you need to know before booking your next adventure.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" style="transition-delay:0s">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is included in the adventure package price?</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          <p>All packages include certified guides, safety equipment, accommodation, meals as specified, transport during the trip, and comprehensive travel insurance. Optional add-ons like photography services are available.</p>
+        </div>
+      </div>
+      <div class="faq-item" style="transition-delay:0.1s">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What fitness level do I need for adventures?</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We offer adventures for every fitness level. Each trip is rated Easy, Moderate, or Hard. Check the difficulty guide on our Adventures page, or contact us for a personalized recommendation.</p>
+        </div>
+      </div>
+      <div class="faq-item" style="transition-delay:0.2s">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I book a custom or private adventure?</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! We specialize in custom itineraries for individuals, families, and corporate groups. Contact us with your preferences and we'll design a unique adventure just for you.</p>
+        </div>
+      </div>
+      <div class="faq-item" style="transition-delay:0.3s">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is the cancellation policy?</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Free cancellation up to 30 days before departure. 50% refund for cancellations 15-30 days before. No refund within 14 days, but you can reschedule to another date at no charge.</p>
+        </div>
+      </div>
+      <div class="faq-item" style="transition-delay:0.4s">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Do you provide equipment, or should I bring my own?</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          <p>All specialized safety equipment is provided. For personal items like hiking boots, backpacks, and clothing, we'll send you a detailed packing list after booking. Rentals are available for most gear.</p>
+        </div>
+      </div>
+      <div class="faq-item" style="transition-delay:0.5s">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Are solo travelers welcome?</span>
+          <i class="fas fa-plus"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Of course! Many of our travelers come solo. You can join a group trip to meet fellow adventurers, or book a private guided experience. We also offer solo traveler discounts on select trips.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Social CTA -->
+  <section class="social-cta">
+    <div class="social-cta-content reveal">
+      <h2>Follow Our Adventures</h2>
+      <p>Join our community of 50,000+ adventure enthusiasts. Get daily inspiration, travel tips, and behind-the-scenes content.</p>
+      <div class="social-cta-links">
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+
+        <p>Your trusted partner for extraordinary adventures around the globe. We turn travel dreams into reality.</p>
+        <div class="social-links">
+          <a href="error.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="error.html"><i class="fab fa-instagram"></i></a>
+          <a href="error.html"><i class="fab fa-twitter"></i></a>
+          <a href="error.html"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="adventures.html">Adventures</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Adventure Types</h4>
+        <ul>
+          <li><a href="adventures.html">Hiking & Trekking</a></li>
+          <li><a href="adventures.html">Water Sports</a></li>
+          <li><a href="adventures.html">Paragliding</a></li>
+          <li><a href="adventures.html">Camping</a></li>
+          <li><a href="adventures.html">Desert Safari</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Adventure St, Denver, CO</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> hello@Stackly.com</p>
+        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 7PM</p>
+
+        <form class="newsletter-form">
+
+        <div class="newsletter-input">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+          >
+        </div>
+
+        <button type="submit">
+          Subscribe
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+      </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Stackly. All rights reserved. | Designed for Adventurers</p>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

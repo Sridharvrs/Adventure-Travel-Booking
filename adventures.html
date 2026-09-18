@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventures | Stackly</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/adventures.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+    
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="adventures.html" class="active">Adventures</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="navbar-login-btn">Login</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+      <i class="fas fa-xmark"></i>
+    </button>
+
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="adventures.html" class="active">Adventures</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Section 1: Hero Header -->
+  <section class="adv-header">
+    <div class="adv-header-bg">
+      <img src="images/img37_converted.webp" alt="Paragliding">
+    </div>
+    <div class="adv-header-overlay"></div>
+    <div class="adv-header-content">
+      <span class="adv-tagline reveal">LIVE THE THRILL</span>
+      <h1 class="reveal" style="transition-delay:0.1s">Adventures That<br><span class="adv-accent">Push Your Limits</span></h1>
+      <p class="reveal" style="transition-delay:0.2s">Choose your adrenaline. From sky to sea to summit, we have an adventure for every thrill-seeker.</p>
+    </div>
+    <div class="adv-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
+
+  <!-- Section 2: Adventure Type Tabs -->
+  <section class="adv-tabs-section">
+    <div class="adv-tabs reveal-zoom">
+      <button class="adv-tab active" data-tab="all"><i class="fas fa-th"></i> All</button>
+      <button class="adv-tab" data-tab="sky"><i class="fas fa-parachute-box"></i> Sky</button>
+      <button class="adv-tab" data-tab="water"><i class="fas fa-water"></i> Water</button>
+      <button class="adv-tab" data-tab="land"><i class="fas fa-mountain"></i> Land</button>
+    </div>
+  </section>
+
+  <!-- Section 3: Adventure Cards -->
+  <section class="adventures-grid-section">
+    <div class="adventures-grid">
+      <!-- Paragliding -->
+      <div class="adventure-card reveal" data-type="sky" style="transition-delay:0s">
+        <div class="adv-card-top">
+          <img src="images/img32.webp" alt="Paragliding">
+          <div class="adv-card-icon"><i class="fas fa-parachute-box"></i></div>
+        </div>
+        <div class="adv-card-content">
+          <span class="adv-card-type">Sky Adventure</span>
+          <h3>Paragliding in the Alps</h3>
+          <p>Soar above snow-capped peaks with certified tandem pilots. No experience needed, just courage.</p>
+          <div class="adv-card-stats">
+            <div><span>Duration</span><strong>Half Day</strong></div>
+            <div><span>Level</span><strong>Beginner</strong></div>
+            <div><span>Price</span><strong>$320</strong></div>
+          </div>
+          <button class="adv-card-btn">Book Adventure <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Scuba Diving -->
+      <div class="adventure-card reveal" data-type="water" style="transition-delay:0.1s">
+        <div class="adv-card-top">
+          <img src="images/img33.webp" alt="Scuba Diving">
+          <div class="adv-card-icon"><i class="fas fa-water"></i></div>
+        </div>
+        <div class="adv-card-content">
+          <span class="adv-card-type">Water Adventure</span>
+          <h3>Coral Reef Scuba Dive</h3>
+          <p>Explore vibrant underwater worlds teeming with marine life in the world's best dive spots.</p>
+          <div class="adv-card-stats">
+            <div><span>Duration</span><strong>Full Day</strong></div>
+            <div><span>Level</span><strong>Intermediate</strong></div>
+            <div><span>Price</span><strong>$450</strong></div>
+          </div>
+          <button class="adv-card-btn" onclick="location.href='error.html'">Book Adventure <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- White Water Rafting -->
+      <div class="adventure-card reveal" data-type="water" style="transition-delay:0.2s">
+        <div class="adv-card-top">
+          <img src="images/img34.webp" alt="White Water Rafting">
+          <div class="adv-card-icon"><i class="fas fa-water"></i></div>
+        </div>
+        <div class="adv-card-content">
+          <span class="adv-card-type">Water Adventure</span>
+          <h3>White Water Rafting</h3>
+          <p>Navigate thrilling Class IV rapids with expert guides. Teamwork, adrenaline, and pure fun.</p>
+          <div class="adv-card-stats">
+            <div><span>Duration</span><strong>Full Day</strong></div>
+            <div><span>Level</span><strong>Advanced</strong></div>
+            <div><span>Price</span><strong>$280</strong></div>
+          </div>
+          <button class="adv-card-btn" onclick="location.href='error.html'">Book Adventure <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Mountain Hiking -->
+      <div class="adventure-card reveal" data-type="land" style="transition-delay:0s">
+        <div class="adv-card-top">
+          <img src="images/img35.webp" alt="Hiking">
+          <div class="adv-card-icon"><i class="fas fa-mountain"></i></div>
+        </div>
+        <div class="adv-card-content">
+          <span class="adv-card-type">Land Adventure</span>
+          <h3>Summit Mountain Trek</h3>
+          <p>Challenge yourself on multi-day treks to the world's most stunning mountain summits.</p>
+          <div class="adv-card-stats">
+            <div><span>Duration</span><strong>7 Days</strong></div>
+            <div><span>Level</span><strong>Advanced</strong></div>
+            <div><span>Price</span><strong>$1,290</strong></div>
+          </div>
+          <button class="adv-card-btn" onclick="location.href='error.html'">Book Adventure <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Desert Safari -->
+      <div class="adventure-card reveal" data-type="land" style="transition-delay:0.1s">
+        <div class="adv-card-top">
+          <img src="images/img36.webp" alt="Desert Safari">
+          <div class="adv-card-icon"><i class="fas fa-mountain"></i></div>
+        </div>
+        <div class="adv-card-content">
+          <span class="adv-card-type">Land Adventure</span>
+          <h3>Sahara Camel Safari</h3>
+          <p>Trek across golden dunes on camelback, camp under desert stars, and live the Bedouin life.</p>
+          <div class="adv-card-stats">
+            <div><span>Duration</span><strong>8 Days</strong></div>
+            <div><span>Level</span><strong>Moderate</strong></div>
+            <div><span>Price</span><strong>$1,750</strong></div>
+          </div>
+          <button class="adv-card-btn" onclick="location.href='error.html'">Book Adventure <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Skydiving -->
+      <div class="adventure-card reveal" data-type="sky" style="transition-delay:0.2s">
+        <div class="adv-card-top">
+          <img src="images/img31.webp" alt="Skydiving">
+          <div class="adv-card-icon"><i class="fas fa-parachute-box"></i></div>
+        </div>
+        <div class="adv-card-content">
+          <span class="adv-card-type">Sky Adventure</span>
+          <h3>Tandem Skydive</h3>
+          <p>Feel the ultimate rush of freefall from 15,000 feet with a certified instructor by your side.</p>
+          <div class="adv-card-stats">
+            <div><span>Duration</span><strong>2 Hours</strong></div>
+            <div><span>Level</span><strong>Beginner</strong></div>
+            <div><span>Price</span><strong>$399</strong></div>
+          </div>
+          <button class="adv-card-btn" onclick="location.href='error.html'">Book Adventure <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: How It Works -->
+  <section class="how-it-works">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Simple Process</span>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Booking your next adventure is easier than ever in just 4 simple steps.</p>
+    </div>
+    <div class="steps-timeline">
+      <div class="step-item reveal" style="transition-delay:0s">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <i class="fas fa-search"></i>
+          <h3>Choose Your Adventure</h3>
+          <p>Browse our catalog of 120+ adventures and pick the one that calls to you.</p>
+        </div>
+      </div>
+      <div class="step-item reveal" style="transition-delay:0.1s">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <i class="fas fa-calendar-check"></i>
+          <h3>Pick Your Dates</h3>
+          <p>Select your preferred dates and group size. Flexible booking available.</p>
+        </div>
+      </div>
+      <div class="step-item reveal" style="transition-delay:0.2s">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <i class="fas fa-credit-card"></i>
+          <h3>Confirm & Pay</h3>
+          <p>Secure checkout with multiple payment options. No hidden fees, ever.</p>
+        </div>
+      </div>
+      <div class="step-item reveal" style="transition-delay:0.3s">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <i class="fas fa-compass"></i>
+          <h3>Start Your Journey</h3>
+          <p>Meet your guide, gear up, and embark on the adventure of a lifetime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ============================================
+     FEATURED ADVENTURE
+============================================= -->
+<section class="featured-adventure">
+  <div class="featured-bg"></div>
+
+  <div class="featured-content">
+
+    <div class="featured-copy reveal-left">
+      <span class="featured-eyebrow">
+        <i class="fas fa-compass"></i>
+        THE ADVENTURE OF A LIFETIME
+      </span>
+
+      <h2>
+        Beyond The
+        <span>Ordinary.</span>
+      </h2>
+
+      <p>
+        Leave the familiar behind and step into landscapes
+        that make every moment feel unforgettable.
+      </p>
+
+      <div class="featured-stats">
+        <div>
+          <strong>07</strong>
+          <span>Days</span>
+        </div>
+
+        <div>
+          <strong>12</strong>
+          <span>Experiences</span>
+        </div>
+
+        <div>
+          <strong>4.9</strong>
+          <span>Guest Rating</span>
+        </div>
+      </div>
+
+      <a href="error.html" class="featured-btn">
+        Explore The Journey
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="featured-location reveal-right">
+      <div class="location-badge">
+        <i class="fas fa-location-dot"></i>
+        Swiss Alps
+      </div>
+
+      <div class="location-scroll">
+        <span>SCROLL TO EXPLORE</span>
+        <i class="fas fa-arrow-down"></i>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     ADVENTURE MOMENTS
+============================================= -->
+<section class="adventure-moments">
+
+  <div class="moments-header reveal">
+    <div>
+      <span class="section-kicker">CAPTURED OUT THERE</span>
+
+      <h2>
+        Moments Worth
+        <span>Remembering.</span>
+      </h2>
+    </div>
+
+    <p>
+      From silent mountain mornings to wild ocean crossings,
+      every adventure leaves something behind.
+    </p>
+  </div>
+
+  <div class="moments-grid">
+
+    <div class="moment moment-large reveal-zoom">
+      <img
+        src="images/img37_converted.webp"
+        alt="Mountain adventure"
+      >
+
+      <div class="moment-overlay">
+        <span>01</span>
+        <h3>Into The Wild</h3>
+        <p>Dolomites · Italy</p>
+      </div>
+    </div>
+
+    <div class="moment moment-small reveal">
+      <img
+        src="images/img38_converted.webp"
+        alt="Ocean adventure"
+      >
+
+      <div class="moment-overlay">
+        <span>02</span>
+        <h3>Chasing Waves</h3>
+        <p>Atlantic Coast</p>
+      </div>
+    </div>
+
+    <div class="moment moment-small reveal">
+      <img
+        src="images/img39_converted.webp"
+        alt="Travel landscape"
+      >
+
+      <div class="moment-overlay">
+        <span>03</span>
+        <h3>Wild Horizons</h3>
+        <p>Patagonia</p>
+      </div>
+    </div>
+
+    <div class="moment moment-wide reveal">
+      <img
+        src="images/img28.webp"
+        alt="Adventure landscape"
+      >
+
+      <div class="moment-overlay">
+        <span>04</span>
+        <h3>Find Your Horizon</h3>
+        <p>Worldwide</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================
+     FIND YOUR ADVENTURE
+============================================= -->
+<section class="find-adventure">
+
+  <div class="find-adventure-inner">
+
+    <div class="find-copy reveal-left">
+      <span class="section-kicker">NOT SURE WHERE TO START?</span>
+
+      <h2>
+        Your Kind Of
+        <span>Adventure.</span>
+      </h2>
+
+      <p>
+        Choose the feeling you're chasing and we'll
+        point you toward the experience.
+      </p>
+    </div>
+
+    <div class="adventure-moods reveal-right">
+
+      <a href="#" class="mood-card">
+        <div class="mood-number">01</div>
+        <i class="fas fa-mountain"></i>
+        <h3>I Want To Escape</h3>
+        <span>Mountains · Trekking · Nature</span>
+        <b><i class="fas fa-arrow-right"></i></b>
+      </a>
+
+      <a href="#" class="mood-card">
+        <div class="mood-number">02</div>
+        <i class="fas fa-water"></i>
+        <h3>I Want A Rush</h3>
+        <span>Rafting · Diving · Surfing</span>
+        <b><i class="fas fa-arrow-right"></i></b>
+      </a>
+
+      <a href="#" class="mood-card">
+        <div class="mood-number">03</div>
+        <i class="fas fa-sun"></i>
+        <h3>I Want To Explore</h3>
+        <span>Deserts · Safaris · Culture</span>
+        <b><i class="fas fa-arrow-right"></i></b>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- Section 5: Difficulty Guide -->
+  <section class="difficulty-guide">
+    <div class="section-header reveal">
+      <span class="section-eyebrow">Know Before You Go</span>
+      <h2 class="section-title">Adventure Difficulty Levels</h2>
+      <p class="section-subtitle">Find the right adventure for your fitness and experience level.</p>
+    </div>
+    <div class="difficulty-grid">
+      <div class="diff-card reveal-left" style="transition-delay:0s">
+        <div class="diff-badge easy">Easy</div>
+        <h3>Beginner Friendly</h3>
+        <p>Perfect for first-timers and families. No prior experience needed. Light physical activity, mostly flat terrain.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> No experience required</li>
+          <li><i class="fas fa-check"></i> Suitable for ages 10+</li>
+          <li><i class="fas fa-check"></i> Light physical effort</li>
+        </ul>
+      </div>
+      <div class="diff-card reveal-zoom" style="transition-delay:0.1s">
+        <div class="diff-badge moderate">Moderate</div>
+        <h3>Some Experience</h3>
+        <p>For those with basic fitness and some outdoor experience. Moderate physical activity, varied terrain.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Basic fitness recommended</li>
+          <li><i class="fas fa-check"></i> Suitable for ages 14+</li>
+          <li><i class="fas fa-check"></i> 3-5 hours activity</li>
+        </ul>
+      </div>
+      <div class="diff-card reveal-right" style="transition-delay:0.2s">
+        <div class="diff-badge hard">Hard</div>
+        <h3>Expert Level</h3>
+        <p>For experienced adventurers only. High fitness required. Challenging terrain and extreme conditions.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Strong fitness required</li>
+          <li><i class="fas fa-check"></i> Suitable for ages 18+</li>
+          <li><i class="fas fa-check"></i> 6+ hours activity</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section 6: Safety Promise -->
+  <section class="safety-promise">
+    <div class="safety-left reveal-left">
+      <span class="section-eyebrow">Our Commitment</span>
+      <h2>Your Safety Is<br>Our Top Priority</h2>
+      <p>Every adventure we offer meets the highest international safety standards. From certified guides to premium equipment, we leave nothing to chance.</p>
+      <div class="safety-features">
+        <div class="safety-feature">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <h4>Certified Guides</h4>
+            <p>All guides hold international certifications in their respective adventure sports.</p>
+          </div>
+        </div>
+        <div class="safety-feature">
+          <i class="fas fa-kit-medical"></i>
+          <div>
+            <h4>First Aid Ready</h4>
+            <p>Comprehensive first aid kits and emergency protocols on every single trip.</p>
+          </div>
+        </div>
+        <div class="safety-feature">
+          <i class="fas fa-tools"></i>
+          <div>
+            <h4>Premium Gear</h4>
+            <p>Top-quality equipment inspected and maintained before every adventure departure.</p>
+          </div>
+        </div>
+        <div class="safety-feature">
+          <i class="fas fa-insurance"></i>
+          <div>
+            <h4>Full Insurance</h4>
+            <p>Every booking includes comprehensive adventure travel insurance coverage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="safety-right reveal-right">
+      <img src="images/img40_converted.webp" alt="Safety gear">
+    </div>
+  </section>
+
+<!-- ============================================
+     FINAL ADVENTURE CTA
+============================================= -->
+<section class="final-adventure-cta">
+
+  <div class="cta-bg"></div>
+
+  <div class="cta-content reveal">
+
+    <span>
+      YOUR NEXT CHAPTER IS OUT THERE
+    </span>
+
+    <h2>
+      Go Somewhere
+      <em>Unforgettable.</em>
+    </h2>
+
+    <p>
+      The mountains are waiting. The oceans are calling.
+      All that's missing is you.
+    </p>
+
+    <div class="cta-actions">
+      <a href="error.html" class="cta-primary">
+        Explore Adventures
+        <i class="fas fa-arrow-right"></i>
+      </a>
+
+      <a href="error.html" class="cta-secondary">
+        Talk To An Expert
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+        <p>Your trusted partner for extraordinary adventures around the globe. We turn travel dreams into reality.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="adventures.html">Adventures</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Adventure Types</h4>
+        <ul>
+          <li><a href="adventures.html">Hiking & Trekking</a></li>
+          <li><a href="adventures.html">Water Sports</a></li>
+          <li><a href="adventures.html">Paragliding</a></li>
+          <li><a href="adventures.html">Camping</a></li>
+          <li><a href="adventures.html">Desert Safari</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Adventure St, Denver, CO</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> hello@Stackly.com</p>
+        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 7PM</p>
+
+        <form class="newsletter-form">
+
+        <div class="newsletter-input">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+          >
+        </div>
+
+        <button type="submit">
+          Subscribe
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+      </form>
+      
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Stackly. All rights reserved. | Designed for Adventurers</p>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/adventures.js"></script>
+</body>
+</html>

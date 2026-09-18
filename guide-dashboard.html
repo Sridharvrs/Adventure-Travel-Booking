@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide Dashboard | Stackly</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/guide-dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- Sidebar -->
+  <aside class="sidebar sidebar-guide">
+    <div class="sidebar-header">
+      <a href="guide-dashboard.html" class="navbar-logo">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+    </div>
+    <div class="sidebar-role-badge">
+      <div class="sidebar-role-avatar guide-avatar avatarLetter">A</div>
+      <div class="sidebar-role-info">
+        <strong class="profileName">Alex Rivera</strong>
+        <span>Lead Guide</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-nav-label">Main Menu</div>
+      <div class="sidebar-nav-item active" data-module="overview" data-title="Guide Dashboard">
+        <i class="fas fa-gauge-high"></i> Overview
+      </div>
+      <div class="sidebar-nav-item" data-module="tours" data-title="My Tours">
+        <i class="fas fa-route"></i> My Tours
+        <span class="nav-badge">4</span>
+      </div>
+      <div class="sidebar-nav-item" data-module="travelers" data-title="Travelers">
+        <i class="fas fa-users"></i> Travelers
+        <span class="nav-badge">28</span>
+      </div>
+      <div class="sidebar-nav-item" data-module="schedule" data-title="My Schedule">
+        <i class="fas fa-calendar-days"></i> Schedule
+      </div>
+      <div class="sidebar-nav-label">Account</div>
+      <div class="sidebar-nav-item" data-module="earnings" data-title="Earnings">
+        <i class="fas fa-chart-line"></i> Earnings
+      </div>
+      <div class="sidebar-nav-item" data-module="profile" data-title="Guide Profile">
+        <i class="fas fa-id-badge"></i> Profile
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="sidebar-logout">
+        <i class="fas fa-right-from-bracket"></i> Logout
+      </button>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay"></div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="topbar-toggle"><i class="fas fa-bars"></i></button>
+        <h1 class="topbar-title">Guide Dashboard</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search tours, travelers...">
+        </div>
+        <button class="topbar-icon-btn"><i class="fas fa-bell"></i><span class="notif-dot"></span></button>
+        <div class="topbar-user">
+          <div class="topbar-user-avatar guide-avatar avatarLetter">A</div>
+          <div class="topbar-user-info">
+            <strong class="profileName">Alex R.</strong>
+            <span>Lead Guide</span>
+          </div>
+        </div>
+        <button class="topbar-logout-mobile"><i class="fas fa-right-from-bracket"></i></button>
+      </div>
+    </header>
+
+    <!-- Dashboard Body -->
+    <main class="dashboard-body">
+
+      <!-- ===== MODULE 1: OVERVIEW ===== -->
+      <section class="module-section active" id="module-overview">
+        <div class="module-header">
+          <h2>Good morning, <span class="profileName">Alex</span>!</h2>
+          <p>You have 2 tours departing this week and 28 active travelers.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: var(--grad-accent);"><i class="fas fa-route"></i></div>
+            <div class="stat-card-value" data-count="4">0</div>
+            <div class="stat-card-label">Active Tours</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 2 departing this week</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: var(--grad-secondary);"><i class="fas fa-users"></i></div>
+            <div class="stat-card-value" data-count="28">0</div>
+            <div class="stat-card-label">Total Travelers</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 6 new this month</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);"><i class="fas fa-dollar-sign"></i></div>
+            <div class="stat-card-value" data-count="14" suffix="K">$0</div>
+            <div class="stat-card-label">Earnings (Month)</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 18% vs last month</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);"><i class="fas fa-star"></i></div>
+            <div class="stat-card-value">4.9</div>
+            <div class="stat-card-label">Avg Rating</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> From 156 reviews</div>
+          </div>
+        </div>
+
+        <div class="guide-overview-grid">
+          <!-- Today's schedule -->
+          <div class="guide-today-card">
+            <div class="section-title-row">
+              <h3>Today's Schedule</h3>
+              <span class="date-pill">Sep 17, 2026</span>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">08:00</div>
+              <div class="schedule-content">
+                <strong>Alps Trek - Day 3</strong>
+                <p>Mountain navigation & ridge walk with 8 travelers</p>
+              </div>
+              <span class="schedule-status ongoing">Ongoing</span>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">14:00</div>
+              <div class="schedule-content">
+                <strong>Gear Check Session</strong>
+                <p>Equipment inspection for Maldives dive trip</p>
+              </div>
+              <span class="schedule-status upcoming">Upcoming</span>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">18:00</div>
+              <div class="schedule-content">
+                <strong>Group Briefing</strong>
+                <p>Evening briefing for Sahara desert safari group</p>
+              </div>
+              <span class="schedule-status upcoming">Upcoming</span>
+            </div>
+          </div>
+
+          <!-- Recent reviews + quick stats -->
+          <div class="guide-side-panel">
+            <div class="guide-reviews-card">
+              <h3>Recent Reviews</h3>
+              <div class="review-item">
+                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Alex was an incredible guide. Knew every hidden trail!"</p>
+                <span>- Sarah M.</span>
+              </div>
+              <div class="review-item">
+                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Felt safe the entire trek. Professional and fun."</p>
+                <span>- James O.</span>
+              </div>
+              <div class="review-item">
+                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>"Best adventure of my life. Highly recommend!"</p>
+                <span>- Maria L.</span>
+              </div>
+            </div>
+
+            <div class="guide-cert-card">
+              <h3>Certifications</h3>
+              <div class="cert-item"><i class="fas fa-certificate"></i> IFMGA Mountain Guide</div>
+              <div class="cert-item"><i class="fas fa-certificate"></i> Wilderness First Responder</div>
+              <div class="cert-item"><i class="fas fa-certificate"></i> Avalanche Safety Level 3</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE 2: MY TOURS ===== -->
+      <section class="module-section" id="module-tours">
+        <div class="module-header">
+          <h2>My Tours</h2>
+          <p>Manage all tours you're leading.</p>
+        </div>
+
+        <div class="tours-list">
+          <div class="tour-card">
+            <div class="tour-card-img"><img src="https://images.pexels.com/photos/10050588/pexels-photo-10050588.jpeg?auto=compress&cs=tinysrgb&h=300&w=400" alt="Alps"></div>
+            <div class="tour-card-body">
+              <div class="tour-card-header">
+                <div>
+                  <h3>Austrian Alps Trek</h3>
+                  <p><i class="fas fa-map-marker-alt"></i> Tyrol, Austria</p>
+                </div>
+                <span class="tour-status-badge active">Active</span>
+              </div>
+              <div class="tour-card-stats">
+                <div><span>Travelers</span><strong>8 / 12</strong></div>
+                <div><span>Duration</span><strong>7 Days</strong></div>
+                <div><span>Start Date</span><strong>Oct 15</strong></div>
+                <div><span>Difficulty</span><strong>Moderate</strong></div>
+              </div>
+              <div class="tour-card-progress">
+                <div class="tour-progress-bar"><div class="tour-progress-fill" style="width: 67%;"></div></div>
+                <span>67% booked</span>
+              </div>
+              <div class="tour-card-actions">
+                <button class="btn-tour-manage" onclick="location.href='dashboardError.html'">Manage Tour</button>
+                <button class="btn-tour-roster" onclick="location.href='dashboardError.html'">View Roster</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-card-img"><img src="https://images.pexels.com/photos/15923489/pexels-photo-15923489.jpeg?auto=compress&cs=tinysrgb&h=300&w=400" alt="Maldives"></div>
+            <div class="tour-card-body">
+              <div class="tour-card-header">
+                <div>
+                  <h3>Maldives Island Hop</h3>
+                  <p><i class="fas fa-map-marker-alt"></i> Maldives</p>
+                </div>
+                <span class="tour-status-badge active">Active</span>
+              </div>
+              <div class="tour-card-stats">
+                <div><span>Travelers</span><strong>6 / 8</strong></div>
+                <div><span>Duration</span><strong>5 Days</strong></div>
+                <div><span>Start Date</span><strong>Nov 5</strong></div>
+                <div><span>Difficulty</span><strong>Easy</strong></div>
+              </div>
+              <div class="tour-card-progress">
+                <div class="tour-progress-bar"><div class="tour-progress-fill" style="width: 75%;"></div></div>
+                <span>75% booked</span>
+              </div>
+              <div class="tour-card-actions">
+                <button class="btn-tour-manage" onclick="location.href='dashboardError.html'">Manage Tour</button>
+                <button class="btn-tour-roster" onclick="location.href='dashboardError.html'">View Roster</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-card-img"><img src="https://images.pexels.com/photos/11862548/pexels-photo-11862548.jpeg?auto=compress&cs=tinysrgb&h=300&w=400" alt="Morocco"></div>
+            <div class="tour-card-body">
+              <div class="tour-card-header">
+                <div>
+                  <h3>Sahara Desert Safari</h3>
+                  <p><i class="fas fa-map-marker-alt"></i> Morocco</p>
+                </div>
+                <span class="tour-status-badge active">Active</span>
+              </div>
+              <div class="tour-card-stats">
+                <div><span>Travelers</span><strong>12 / 15</strong></div>
+                <div><span>Duration</span><strong>8 Days</strong></div>
+                <div><span>Start Date</span><strong>Dec 1</strong></div>
+                <div><span>Difficulty</span><strong>Moderate</strong></div>
+              </div>
+              <div class="tour-card-progress">
+                <div class="tour-progress-bar"><div class="tour-progress-fill" style="width: 80%;"></div></div>
+                <span>80% booked</span>
+              </div>
+              <div class="tour-card-actions">
+                <button class="btn-tour-manage" onclick="location.href='dashboardError.html'">Manage Tour</button>
+                <button class="btn-tour-roster" onclick="location.href='dashboardError.html'">View Roster</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-card-img"><img src="https://images.pexels.com/photos/7689055/pexels-photo-7689055.jpeg?auto=compress&cs=tinysrgb&h=300&w=400" alt="Patagonia"></div>
+            <div class="tour-card-body">
+              <div class="tour-card-header">
+                <div>
+                  <h3>Patagonia Winter Trek</h3>
+                  <p><i class="fas fa-map-marker-alt"></i> Argentina</p>
+                </div>
+                <span class="tour-status-badge draft">Draft</span>
+              </div>
+              <div class="tour-card-stats">
+                <div><span>Travelers</span><strong>2 / 8</strong></div>
+                <div><span>Duration</span><strong>10 Days</strong></div>
+                <div><span>Start Date</span><strong>Jan 10</strong></div>
+                <div><span>Difficulty</span><strong>Hard</strong></div>
+              </div>
+              <div class="tour-card-progress">
+                <div class="tour-progress-bar"><div class="tour-progress-fill" style="width: 25%;"></div></div>
+                <span>25% booked</span>
+              </div>
+              <div class="tour-card-actions">
+                <button class="btn-tour-manage" onclick="location.href='dashboardError.html'">Edit Tour</button>
+                <button class="btn-tour-publish" onclick="location.href='dashboardError.html'">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE 3: TRAVELERS ===== -->
+      <section class="module-section" id="module-travelers">
+        <div class="module-header">
+          <h2>My Travelers</h2>
+          <p>Everyone currently booked on your tours.</p>
+        </div>
+
+        <div class="travelers-table-wrap">
+          <table class="travelers-table">
+            <thead>
+              <tr>
+                <th>Traveler</th>
+                <th>Tour</th>
+                <th>Status</th>
+                <th>Emergency Contact</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: var(--grad-secondary);">S</div>
+                    <div><strong>Sarah Mitchell</strong><span>sarah.m@email.com</span></div>
+                  </div>
+                </td>
+                <td>Austrian Alps Trek</td>
+                <td><span class="traveler-status confirmed">Confirmed</span></td>
+                <td>+44 7700 900123</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: var(--grad-accent);">J</div>
+                    <div><strong>James Okoro</strong><span>james.o@email.com</span></div>
+                  </div>
+                </td>
+                <td>Austrian Alps Trek</td>
+                <td><span class="traveler-status confirmed">Confirmed</span></td>
+                <td>+234 801 234 5678</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: linear-gradient(135deg, #3498db, #2980b9);">M</div>
+                    <div><strong>Maria Lopez</strong><span>maria.l@email.com</span></div>
+                  </div>
+                </td>
+                <td>Sahara Desert Safari</td>
+                <td><span class="traveler-status confirmed">Confirmed</span></td>
+                <td>+34 612 345 678</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">D</div>
+                    <div><strong>David Chen</strong><span>david.c@email.com</span></div>
+                  </div>
+                </td>
+                <td>Maldives Island Hop</td>
+                <td><span class="traveler-status pending">Payment Due</span></td>
+                <td>+65 8123 4567</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">R</div>
+                    <div><strong>Rachel Green</strong><span>rachel.g@email.com</span></div>
+                  </div>
+                </td>
+                <td>Maldives Island Hop</td>
+                <td><span class="traveler-status confirmed">Confirmed</span></td>
+                <td>+1 555 987 6543</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: linear-gradient(135deg, #1abc9c, #16a085);">T</div>
+                    <div><strong>Tom Wilson</strong><span>tom.w@email.com</span></div>
+                  </div>
+                </td>
+                <td>Sahara Desert Safari</td>
+                <td><span class="traveler-status confirmed">Confirmed</span></td>
+                <td>+61 400 123 456</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: linear-gradient(135deg, #f39c12, #e67e22);">L</div>
+                    <div><strong>Lisa Anderson</strong><span>lisa.a@email.com</span></div>
+                  </div>
+                </td>
+                <td>Patagonia Winter Trek</td>
+                <td><span class="traveler-status pending">Payment Due</span></td>
+                <td>+46 70 123 4567</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="traveler-cell">
+                    <div class="traveler-avatar" style="background: linear-gradient(135deg, #34495e, #2c3e50);">N</div>
+                    <div><strong>Noah Smith</strong><span>noah.s@email.com</span></div>
+                  </div>
+                </td>
+                <td>Patagonia Winter Trek</td>
+                <td><span class="traveler-status confirmed">Confirmed</span></td>
+                <td>+1 555 456 7890</td>
+                <td><button class="btn-traveler-action"><i class="fas fa-eye"></i></button><button class="btn-traveler-action"><i class="fas fa-message"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== MODULE 4: SCHEDULE ===== -->
+      <section class="module-section" id="module-schedule">
+        <div class="module-header">
+          <h2>My Schedule</h2>
+          <p>Your upcoming tours and assignments.</p>
+        </div>
+
+        <div class="schedule-calendar">
+          <div class="calendar-header">
+            <h3>September 2026</h3>
+            <div class="calendar-nav">
+              <button class="cal-nav-btn"><i class="fas fa-chevron-left"></i></button>
+              <button class="cal-nav-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <div class="calendar-grid">
+            <div class="cal-day-header">Sun</div>
+            <div class="cal-day-header">Mon</div>
+            <div class="cal-day-header">Tue</div>
+            <div class="cal-day-header">Wed</div>
+            <div class="cal-day-header">Thu</div>
+            <div class="cal-day-header">Fri</div>
+            <div class="cal-day-header">Sat</div>
+            <div class="cal-day dim">30</div>
+            <div class="cal-day">1</div>
+            <div class="cal-day">2</div>
+            <div class="cal-day">3</div>
+            <div class="cal-day">4</div>
+            <div class="cal-day">5</div>
+            <div class="cal-day">6</div>
+            <div class="cal-day">7</div>
+            <div class="cal-day">8</div>
+            <div class="cal-day">9</div>
+            <div class="cal-day">10</div>
+            <div class="cal-day">11</div>
+            <div class="cal-day">12</div>
+            <div class="cal-day">13</div>
+            <div class="cal-day">14</div>
+            <div class="cal-day has-event">15<span class="cal-event">Alps Trek Starts</span></div>
+            <div class="cal-day has-event">16<span class="cal-event">Alps Day 2</span></div>
+            <div class="cal-day has-event today">17<span class="cal-event">Alps Day 3</span></div>
+            <div class="cal-day has-event">18<span class="cal-event">Alps Day 4</span></div>
+            <div class="cal-day has-event">19<span class="cal-event">Alps Day 5</span></div>
+            <div class="cal-day has-event">20<span class="cal-event">Alps Day 6</span></div>
+            <div class="cal-day has-event">21<span class="cal-event">Alps Ends</span></div>
+            <div class="cal-day">22</div>
+            <div class="cal-day">23</div>
+            <div class="cal-day">24</div>
+            <div class="cal-day">25</div>
+            <div class="cal-day">26</div>
+            <div class="cal-day">27</div>
+            <div class="cal-day">28</div>
+            <div class="cal-day">29</div>
+            <div class="cal-day">30</div>
+            <div class="cal-day dim">1</div>
+            <div class="cal-day dim">2</div>
+            <div class="cal-day dim">3</div>
+            <div class="cal-day dim has-event">4<span class="cal-event">Maldives Prep</span></div>
+            <div class="cal-day dim has-event">5<span class="cal-event">Maldives Starts</span></div>
+            <div class="cal-day dim">6</div>
+            <div class="cal-day dim">7</div>
+          </div>
+        </div>
+
+        <div class="upcoming-events">
+          <h3>Upcoming Events</h3>
+          <div class="event-row">
+            <div class="event-date"><span class="event-day">15</span><span class="event-month">OCT</span></div>
+            <div class="event-info"><strong>Austrian Alps Trek Begins</strong><p>8 travelers, 7 days, Tyrol Austria</p></div>
+            <span class="event-badge">Tour</span>
+          </div>
+          <div class="event-row">
+            <div class="event-date"><span class="event-day">05</span><span class="event-month">NOV</span></div>
+            <div class="event-info"><strong>Maldives Island Hop</strong><p>6 travelers, 5 days, Maldives</p></div>
+            <span class="event-badge">Tour</span>
+          </div>
+          <div class="event-row">
+            <div class="event-date"><span class="event-day">01</span><span class="event-month">DEC</span></div>
+            <div class="event-info"><strong>Sahara Desert Safari</strong><p>12 travelers, 8 days, Morocco</p></div>
+            <span class="event-badge">Tour</span>
+          </div>
+          <div class="event-row">
+            <div class="event-date"><span class="event-day">10</span><span class="event-month">JAN</span></div>
+            <div class="event-info"><strong>Patagonia Winter Trek</strong><p>2 travelers (draft), 10 days, Argentina</p></div>
+            <span class="event-badge draft">Draft</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE 5: EARNINGS ===== -->
+      <section class="module-section" id="module-earnings">
+        <div class="module-header">
+          <h2>Earnings</h2>
+          <p>Track your income and performance.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: var(--grad-secondary);"><i class="fas fa-wallet"></i></div>
+            <div class="stat-card-value" data-count="14" suffix="K">$0</div>
+            <div class="stat-card-label">This Month</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 18% vs last month</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: var(--grad-accent);"><i class="fas fa-coins"></i></div>
+            <div class="stat-card-value" data-count="98" suffix="K">$0</div>
+            <div class="stat-card-label">Total Earnings</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> Year to date</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: var(--grad-primary);"><i class="fas fa-chart-pie"></i></div>
+            <div class="stat-card-value" data-count="42">0</div>
+            <div class="stat-card-label">Tours Completed</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> This year</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);"><i class="fas fa-clock"></i></div>
+            <div class="stat-card-value" data-count="280">0</div>
+            <div class="stat-card-label">Total Days Guided</div>
+            <div class="stat-card-trend up"><i class="fas fa-arrow-up"></i> Across all tours</div>
+          </div>
+        </div>
+
+        <div class="earnings-chart-card">
+          <div class="section-title-row">
+            <h3>Monthly Earnings</h3>
+            <select class="chart-period-select">
+              <option>Last 6 Months</option>
+              <option>Last 12 Months</option>
+              <option>This Year</option>
+            </select>
+          </div>
+          <div class="earnings-bar-chart">
+            <div class="bar-col"><div class="bar" style="height: 45%;"><span>$8.2K</span></div><label>Apr</label></div>
+            <div class="bar-col"><div class="bar" style="height: 60%;"><span>$10.5K</span></div><label>May</label></div>
+            <div class="bar-col"><div class="bar" style="height: 52%;"><span>$9.1K</span></div><label>Jun</label></div>
+            <div class="bar-col"><div class="bar" style="height: 70%;"><span>$12.3K</span></div><label>Jul</label></div>
+            <div class="bar-col"><div class="bar" style="height: 65%;"><span>$11.8K</span></div><label>Aug</label></div>
+            <div class="bar-col"><div class="bar" style="height: 82%;"><span>$14.0K</span></div><label>Sep</label></div>
+          </div>
+        </div>
+
+        <div class="earnings-breakdown">
+          <h3>Earnings by Tour</h3>
+          <div class="breakdown-item">
+            <div class="breakdown-info"><strong>Austrian Alps Trek</strong><span>12 tours completed</span></div>
+            <div class="breakdown-amount">$32,400</div>
+            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 85%;"></div></div>
+          </div>
+          <div class="breakdown-item">
+            <div class="breakdown-info"><strong>Maldives Island Hop</strong><span>10 tours completed</span></div>
+            <div class="breakdown-amount">$28,200</div>
+            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 74%;"></div></div>
+          </div>
+          <div class="breakdown-item">
+            <div class="breakdown-info"><strong>Sahara Desert Safari</strong><span>8 tours completed</span></div>
+            <div class="breakdown-amount">$22,600</div>
+            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 59%;"></div></div>
+          </div>
+          <div class="breakdown-item">
+            <div class="breakdown-info"><strong>Patagonia Winter Trek</strong><span>5 tours completed</span></div>
+            <div class="breakdown-amount">$14,800</div>
+            <div class="breakdown-bar"><div class="breakdown-fill" style="width: 39%;"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODULE 6: PROFILE ===== -->
+      <section class="module-section" id="module-profile">
+        <div class="module-header">
+          <h2>Guide Profile</h2>
+          <p>Manage your guide credentials and information.</p>
+        </div>
+
+        <div class="guide-profile-layout">
+          <div class="guide-profile-card">
+            <div class="guide-profile-banner"></div>
+            <div class="guide-profile-avatar-wrap">
+              <div class="guide-profile-avatar">A</div>
+            </div>
+            <div class="guide-profile-info">
+              <h3>Alex Rivera</h3>
+              <span class="guide-profile-role">Lead Mountain Guide</span>
+              <div class="guide-profile-rating">
+                <i class="fas fa-star"></i> 4.9 <span>(156 reviews)</span>
+              </div>
+              <div class="guide-profile-stats">
+                <div><strong>42</strong><span>Tours</span></div>
+                <div><strong>280</strong><span>Days</span></div>
+                <div><strong>3</strong><span>Certs</span></div>
+              </div>
+              <div class="guide-profile-certs">
+                <div class="cert-pill"><i class="fas fa-certificate"></i> IFMGA</div>
+                <div class="cert-pill"><i class="fas fa-certificate"></i> WFR</div>
+                <div class="cert-pill"><i class="fas fa-certificate"></i> Avy L3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guide-profile-form">
+            <h3>Professional Information</h3>
+            <form class="profile-form">
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input type="text" value="Alex Rivera">
+                </div>
+                <div class="form-group">
+                  <label>Guide Title</label>
+                  <input type="text" value="Lead Mountain Guide">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" value="alex.rivera@Stackly.com">
+                </div>
+                <div class="form-group">
+                  <label>Phone</label>
+                  <input type="tel" value="+43 512 123 456">
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Base Location</label>
+                  <input type="text" value="Innsbruck, Austria">
+                </div>
+                <div class="form-group">
+                  <label>Years of Experience</label>
+                  <input type="text" value="15">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Specializations</label>
+                <input type="text" value="Mountain Trekking, Alpine Climbing, Winter Expeditions">
+              </div>
+              <div class="form-group">
+                <label>Bio</label>
+                <textarea rows="4">IFMGA-certified mountain guide with 15 years of experience leading expeditions in the Alps, Himalayas, and Andes. Passionate about sharing the mountains safely and creating unforgettable experiences for every traveler.</textarea>
+              </div>
+              <div class="form-group">
+                <label>Languages</label>
+                <input type="text" value="English, German, Spanish, French">
+              </div>
+              <button type="button" class="btn-save-profile" onclick="location.href='dashboardError.html'">Update Profile</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/guide-dashboard.js"></script>
+</body>
+</html>

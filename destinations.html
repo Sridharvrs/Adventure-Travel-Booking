@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | Stackly</title>
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/destinations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="navbar-logo">
+      <img src="images/logo.webp" alt="Stackly Logo">
+    </a>
+    
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="destinations.html" class="active">Destinations</a></li>
+      <li><a href="adventures.html">Adventures</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" class="navbar-login-btn btn-shine">Login</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+      <i class="fas fa-xmark"></i>
+    </button>
+
+    <a href="index.html">Home</a>
+    <a href="destinations.html" class="active">Destinations</a>
+    <a href="adventures.html">Adventures</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="login.html" class="mobile-login-btn">Login</a>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Section 1: Page Header -->
+  <section class="page-header">
+    <div class="page-header-particles" id="headerParticles"></div>
+    <div class="page-header-bg" data-parallax="0.3">
+      <img src="images/img18.webp" alt="Jasper National Park">
+    </div>
+    <div class="page-header-overlay"></div>
+    <!-- Decorative floating shapes -->
+    <div class="page-header-decor">
+      <div class="phd-shape phd-1"></div>
+      <div class="phd-shape phd-2"></div>
+    </div>
+    <div class="page-header-content">
+      <span class="page-tagline reveal">DESTINATIONS</span>
+      <h1 class="reveal" style="transition-delay:0.1s">Explore The World's<br><span class="header-accent gradient-text">Most Wild Places</span></h1>
+      <p class="reveal" style="transition-delay:0.2s">From snow-capped peaks to tropical shores, discover destinations that will take your breath away.</p>
+      <div class="breadcrumb reveal" style="transition-delay:0.3s">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Destinations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Filter Bar -->
+  <section class="filter-section">
+    <div class="filter-container reveal-zoom">
+      <div class="filter-group">
+        <label>Filter by Region:</label>
+        <div class="filter-pills">
+          <button class="filter-pill active ripple-effect" data-filter="all">All Regions</button>
+          <button class="filter-pill ripple-effect" data-filter="mountains">Mountains</button>
+          <button class="filter-pill ripple-effect" data-filter="beaches">Beaches</button>
+          <button class="filter-pill ripple-effect" data-filter="jungle">Jungle</button>
+          <button class="filter-pill ripple-effect" data-filter="desert">Desert</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Destination Cards -->
+  <section class="destinations-list">
+    <div class="decor-orb" style="width:250px;height:250px;background:var(--accent);top:10%;right:-80px;"></div>
+    <div class="dest-cards-grid">
+      <!-- Card 1 -->
+      <div class="dest-list-card reveal" data-region="mountains" style="transition-delay:0s">
+        <div class="card-img-wrap">
+          <img src="images/img6.webp" alt="Austrian Alps">
+          <span class="card-tag">Mountains</span>
+        </div>
+        <div class="card-body">
+          <h3>Austrian Alps Trek</h3>
+          <p class="card-location"><i class="fas fa-map-marker-alt"></i> Tyrol, Austria</p>
+          <p class="card-desc">Conquer dramatic peaks and alpine meadows on this 7-day guided trek through the heart of the Alps.</p>
+          <div class="card-features">
+            <span><i class="fas fa-clock"></i> 7 Days</span>
+            <span><i class="fas fa-users"></i> Max 12</span>
+            <span><i class="fas fa-signal"></i> Moderate</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-rating">
+              <i class="fas fa-star"></i> 4.9 <span>(320 reviews)</span>
+            </div>
+            <div class="card-price-wrap">
+              <span class="price-from">From</span>
+              <span class="price-amount">$1,290</span>
+            </div>
+          </div>
+          <button class="card-book-btn btn-shine ripple-effect" onclick="location.href='error.html'">Book Now <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="dest-list-card reveal" data-region="beaches" style="transition-delay:0.1s">
+        <div class="card-img-wrap">
+          <img src="images/img7.webp" alt="Maldives">
+          <span class="card-tag">Beaches</span>
+        </div>
+        <div class="card-body">
+          <h3>Maldives Island Hop</h3>
+          <p class="card-location"><i class="fas fa-map-marker-alt"></i> Maldives</p>
+          <p class="card-desc">Island-hop through crystal-clear lagoons, snorkel with manta rays, and relax on pristine white beaches.</p>
+          <div class="card-features">
+            <span><i class="fas fa-clock"></i> 5 Days</span>
+            <span><i class="fas fa-users"></i> Max 8</span>
+            <span><i class="fas fa-signal"></i> Easy</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-rating">
+              <i class="fas fa-star"></i> 4.8 <span>(215 reviews)</span>
+            </div>
+            <div class="card-price-wrap">
+              <span class="price-from">From</span>
+              <span class="price-amount">$2,100</span>
+            </div>
+          </div>
+          <button class="card-book-btn btn-shine ripple-effect" onclick="location.href='error.html'">Book Now <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="dest-list-card reveal" data-region="jungle" style="transition-delay:0.2s">
+        <div class="card-img-wrap">
+          <img src="images/img8.webp" alt="Costa Rica Jungle">
+          <span class="card-tag">Jungle</span>
+        </div>
+        <div class="card-body">
+          <h3>Costa Rica Rainforest</h3>
+          <p class="card-location"><i class="fas fa-map-marker-alt"></i> Costa Rica</p>
+          <p class="card-desc">Trek through dense rainforests, discover hidden waterfalls, and spot exotic wildlife in their natural habitat.</p>
+          <div class="card-features">
+            <span><i class="fas fa-clock"></i> 6 Days</span>
+            <span><i class="fas fa-users"></i> Max 10</span>
+            <span><i class="fas fa-signal"></i> Moderate</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-rating">
+              <i class="fas fa-star"></i> 4.7 <span>(180 reviews)</span>
+            </div>
+            <div class="card-price-wrap">
+              <span class="price-from">From</span>
+              <span class="price-amount">$1,550</span>
+            </div>
+          </div>
+          <button class="card-book-btn btn-shine ripple-effect" onclick="location.href='error.html'">Book Now <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="dest-list-card reveal" data-region="desert" style="transition-delay:0s">
+        <div class="card-img-wrap">
+          <img src="images/img9.webp" alt="Morocco Desert">
+          <span class="card-tag">Desert</span>
+        </div>
+        <div class="card-body">
+          <h3>Sahara Desert Safari</h3>
+          <p class="card-location"><i class="fas fa-map-marker-alt"></i> Morocco</p>
+          <p class="card-desc">Ride camels across golden dunes, camp under a blanket of stars, and experience Berber culture firsthand.</p>
+          <div class="card-features">
+            <span><i class="fas fa-clock"></i> 8 Days</span>
+            <span><i class="fas fa-users"></i> Max 15</span>
+            <span><i class="fas fa-signal"></i> Moderate</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-rating">
+              <i class="fas fa-star"></i> 4.9 <span>(295 reviews)</span>
+            </div>
+            <div class="card-price-wrap">
+              <span class="price-from">From</span>
+              <span class="price-amount">$1,750</span>
+            </div>
+          </div>
+          <button class="card-book-btn btn-shine ripple-effect" onclick="location.href='error.html'">Book Now <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="dest-list-card reveal" data-region="mountains" style="transition-delay:0.1s">
+        <div class="card-img-wrap">
+          <img src="images/img19.webp" alt="Snow Mountains">
+          <span class="card-tag">Mountains</span>
+        </div>
+        <div class="card-body">
+          <h3>Patagonia Winter Trek</h3>
+          <p class="card-location"><i class="fas fa-map-marker-alt"></i> Argentina</p>
+          <p class="card-desc">Experience the raw beauty of Patagonia's glaciers, jagged peaks, and pristine wilderness in winter.</p>
+          <div class="card-features">
+            <span><i class="fas fa-clock"></i> 10 Days</span>
+            <span><i class="fas fa-users"></i> Max 8</span>
+            <span><i class="fas fa-signal"></i> Hard</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-rating">
+              <i class="fas fa-star"></i> 4.9 <span>(150 reviews)</span>
+            </div>
+            <div class="card-price-wrap">
+              <span class="price-from">From</span>
+              <span class="price-amount">$2,450</span>
+            </div>
+          </div>
+          <button class="card-book-btn btn-shine ripple-effect" onclick="location.href='error.html'">Book Now <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="dest-list-card reveal" data-region="beaches" style="transition-delay:0.2s">
+        <div class="card-img-wrap">
+          <img src="images/img20.webp" alt="Tropical Island">
+          <span class="card-tag">Beaches</span>
+        </div>
+        <div class="card-body">
+          <h3>Philippines Island Quest</h3>
+          <p class="card-location"><i class="fas fa-map-marker-alt"></i> Palawan, Philippines</p>
+          <p class="card-desc">Kayak through limestone lagoons, cliff dive into turquoise waters, and camp on secluded beaches.</p>
+          <div class="card-features">
+            <span><i class="fas fa-clock"></i> 7 Days</span>
+            <span><i class="fas fa-users"></i> Max 10</span>
+            <span><i class="fas fa-signal"></i> Easy</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-rating">
+              <i class="fas fa-star"></i> 4.8 <span>(190 reviews)</span>
+            </div>
+            <div class="card-price-wrap">
+              <span class="price-from">From</span>
+              <span class="price-amount">$1,680</span>
+            </div>
+          </div>
+          <button class="card-book-btn btn-shine ripple-effect" onclick="location.href='error.html'">Book Now <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <p class="no-results" id="noResults" style="display:none;">No destinations found in this category. Try another filter!</p>
+  </section>
+
+<!-- ============================================
+     Section 4: Choose Your Escape
+     ============================================ -->
+<section class="escape-section">
+  <div class="escape-bg-orb escape-orb-1"></div>
+  <div class="escape-bg-orb escape-orb-2"></div>
+
+  <div class="section-header reveal">
+    <span class="section-eyebrow">FIND YOUR ESCAPE</span>
+    <h2>Where Will Your <span>Adventure</span> Take You?</h2>
+    <p>Choose the landscape that calls to you and discover unforgettable experiences.</p>
+  </div>
+
+  <div class="escape-grid">
+
+    <a href="#" class="escape-card escape-card-large reveal-left">
+      <img src="images/img21.webp" alt="Mountain adventure">
+
+      <div class="escape-gradient"></div>
+
+      <div class="escape-number">01</div>
+
+      <div class="escape-content">
+        <span>HIGH ALTITUDE</span>
+        <h3>Into The Mountains</h3>
+        <p>Chase peaks, glaciers and endless alpine horizons.</p>
+        <div class="escape-link">
+          Explore Mountains <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="escape-card reveal">
+      <img src="images/img22.webp" alt="Tropical beach">
+
+      <div class="escape-gradient"></div>
+
+      <div class="escape-number">02</div>
+
+      <div class="escape-content">
+        <span>TROPICAL ESCAPES</span>
+        <h3>Chase The Ocean</h3>
+        <p>Turquoise waters and hidden islands.</p>
+        <div class="escape-link">
+          Explore Beaches <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="escape-card reveal-right">
+      <img src="images/img23.webp" alt="Rainforest">
+
+      <div class="escape-gradient"></div>
+
+      <div class="escape-number">03</div>
+
+      <div class="escape-content">
+        <span>WILD & UNTAMED</span>
+        <h3>Into The Jungle</h3>
+        <p>Follow trails where nature rules.</p>
+        <div class="escape-link">
+          Explore Jungles <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </a>
+
+    <a href="#" class="escape-card reveal-zoom">
+      <img src="images/img24.webp" alt="Desert landscape">
+
+      <div class="escape-gradient"></div>
+
+      <div class="escape-number">04</div>
+
+      <div class="escape-content">
+        <span>ENDLESS HORIZONS</span>
+        <h3>Across The Desert</h3>
+        <p>Golden dunes, ancient trails and star-filled nights.</p>
+        <div class="escape-link">
+          Explore Deserts <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     Section 5: Expedition Journey
+     ============================================ -->
+<section class="journey-section">
+
+  <div class="journey-top">
+    <div class="journey-heading reveal-left">
+      <span class="section-eyebrow">THE Stackly WAY</span>
+      <h2>Every Great Journey<br><span>Starts With A Step.</span></h2>
+    </div>
+
+    <div class="journey-intro reveal-right">
+      <p>
+        We turn distant places into unforgettable stories through carefully
+        planned adventures, local expertise and experiences designed around you.
+      </p>
+    </div>
+  </div>
+
+  <div class="journey-line">
+
+    <div class="journey-step reveal-zoom">
+      <div class="journey-icon">
+        <i class="fas fa-compass"></i>
+      </div>
+      <span class="journey-step-number">01</span>
+      <h3>Choose</h3>
+      <p>Find the destination and adventure that matches your travel style.</p>
+    </div>
+
+    <div class="journey-step reveal-zoom">
+      <div class="journey-icon">
+        <i class="fas fa-route"></i>
+      </div>
+      <span class="journey-step-number">02</span>
+      <h3>Plan</h3>
+      <p>Our specialists build a seamless itinerary around your interests.</p>
+    </div>
+
+    <div class="journey-step reveal-zoom">
+      <div class="journey-icon">
+        <i class="fas fa-person-hiking"></i>
+      </div>
+      <span class="journey-step-number">03</span>
+      <h3>Explore</h3>
+      <p>Travel deeper with local guides and carefully selected experiences.</p>
+    </div>
+
+    <div class="journey-step reveal-zoom">
+      <div class="journey-icon">
+        <i class="fas fa-camera-retro"></i>
+      </div>
+      <span class="journey-step-number">04</span>
+      <h3>Remember</h3>
+      <p>Return home with stories that stay with you long after the trip.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     Section 6: Why Stackly
+     ============================================ -->
+<section class="why-section">
+
+  <div class="why-image reveal-left">
+    <img
+      src="images/img25.webp"
+      alt="Adventure traveler in mountains"
+    >
+
+    <div class="why-image-badge">
+      <i class="fas fa-compass"></i>
+      <div>
+        <strong>15+</strong>
+        <span>Years Exploring</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="why-content reveal-right">
+
+    <span class="section-eyebrow">WHY Stackly</span>
+
+    <h2>Not Just A Trip.<br><span>A Story Worth Telling.</span></h2>
+
+    <p class="why-lead">
+      Adventure is more than reaching a destination. It's the people you meet,
+      the unexpected moments and the places that change the way you see the world.
+    </p>
+
+    <div class="why-features">
+
+      <div class="why-feature">
+        <div class="why-feature-icon">
+          <i class="fas fa-earth-americas"></i>
+        </div>
+        <div>
+          <h3>Curated Destinations</h3>
+          <p>Handpicked locations chosen for unforgettable experiences.</p>
+        </div>
+      </div>
+
+      <div class="why-feature">
+        <div class="why-feature-icon">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <div>
+          <h3>Trusted Local Guides</h3>
+          <p>Travel with people who know every trail, coastline and hidden path.</p>
+        </div>
+      </div>
+
+      <div class="why-feature">
+        <div class="why-feature-icon">
+          <i class="fas fa-sliders"></i>
+        </div>
+        <div>
+          <h3>Built Around You</h3>
+          <p>Flexible adventures designed around your pace and interests.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="error.html" class="why-btn btn-shine ripple-effect">
+      Discover Our Story
+      <i class="fas fa-arrow-right"></i>
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ============================================
+     Section 7: Adventure Stories
+     ============================================ -->
+<section class="stories-section">
+
+  <div class="stories-header reveal">
+    <div>
+      <span class="section-eyebrow">FROM THE WILD</span>
+      <h2>Stories From <span>The Journey.</span></h2>
+    </div>
+
+    <p>
+      Every destination leaves something behind — a view, a feeling,
+      a challenge, a story you'll remember long after returning home.
+    </p>
+  </div>
+
+  <div class="stories-grid">
+
+    <article class="story-card story-main reveal-left">
+      <div class="story-image">
+        <img
+          src="images/img1.webp"
+          alt="Mountain adventure"
+        >
+      </div>
+
+      <div class="story-overlay"></div>
+
+      <div class="story-location">
+        <i class="fas fa-location-dot"></i>
+        Patagonia, Argentina
+      </div>
+
+      <div class="story-content">
+        <span>ADVENTURE JOURNAL · 08 DAYS</span>
+        <h3>Where The Mountains<br>Meet The Sky</h3>
+
+        <div class="story-bottom">
+          <p>
+            A journey through wild valleys, frozen peaks and landscapes
+            that feel completely untouched.
+          </p>
+
+          <div class="story-arrow">
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="story-card reveal">
+      <div class="story-image">
+        <img
+          src="images/img27.webp"
+          alt="Tropical island adventure"
+        >
+      </div>
+
+      <div class="story-overlay"></div>
+
+      <div class="story-location">
+        <i class="fas fa-location-dot"></i>
+        Palawan, Philippines
+      </div>
+
+      <div class="story-content">
+        <span>ISLAND QUEST · 07 DAYS</span>
+        <h3>Beyond The<br>Blue Horizon</h3>
+
+        <div class="story-bottom">
+          <p>
+            Hidden lagoons, crystal water and islands waiting to be explored.
+          </p>
+
+          <div class="story-arrow">
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="story-card reveal-right">
+      <div class="story-image">
+        <img
+          src="images/img28.webp"
+          alt="Desert adventure"
+        >
+      </div>
+
+      <div class="story-overlay"></div>
+
+      <div class="story-location">
+        <i class="fas fa-location-dot"></i>
+        Sahara, Morocco
+      </div>
+
+      <div class="story-content">
+        <span>DESERT EXPEDITION · 08 DAYS</span>
+        <h3>Into The<br>Golden Silence</h3>
+
+        <div class="story-bottom">
+          <p>
+            Cross endless dunes and sleep beneath a sky filled with stars.
+          </p>
+
+          <div class="story-arrow">
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="stories-route reveal">
+    <span></span>
+    <div class="route-dot">
+      <i class="fas fa-compass"></i>
+    </div>
+    <span></span>
+    <p>KEEP EXPLORING</p>
+  </div>
+
+</section>
+
+
+<!-- ============================================
+     Section 8: The Wild Awaits
+     ============================================ -->
+<section class="wild-section">
+
+  <div class="wild-bg"></div>
+  <div class="wild-overlay"></div>
+
+  <div class="wild-particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="wild-content reveal-zoom">
+
+    <div class="wild-compass">
+      <div class="compass-ring compass-ring-1"></div>
+      <div class="compass-ring compass-ring-2"></div>
+      <i class="fas fa-compass"></i>
+    </div>
+
+    <span class="wild-eyebrow">YOUR NEXT ADVENTURE IS OUT THERE</span>
+
+    <h2>
+      Leave The Ordinary.<br>
+      <span>Find The Wild.</span>
+    </h2>
+
+    <p>
+      From remote mountain trails to hidden islands and endless deserts,
+      the world is waiting for you to step outside the familiar.
+    </p>
+
+    <div class="wild-actions">
+      <a href="error.html" class="wild-btn">
+        Explore Adventures
+        <i class="fas fa-arrow-right"></i>
+      </a>
+
+      <a href="error.html" class="wild-link">
+        Talk To An Explorer
+        <i class="fas fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+
+  </div>
+
+
+  <div class="wild-stats">
+
+    <div class="wild-stat">
+      <strong>50+</strong>
+      <span>Countries</span>
+    </div>
+
+    <div class="wild-stat-line"></div>
+
+    <div class="wild-stat">
+      <strong>150+</strong>
+      <span>Wild Routes</span>
+    </div>
+
+    <div class="wild-stat-line"></div>
+
+    <div class="wild-stat">
+      <strong>8.5K</strong>
+      <span>Explorers</span>
+    </div>
+
+  </div>
+
+
+  <div class="wild-scroll">
+    <span>SCROLL TO EXPLORE</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+</section>
+
+<!-- ============================================
+     Section 9: Choose Your Adventure
+     ============================================ -->
+<section class="adventure-level-section">
+
+  <div class="adventure-level-bg"></div>
+
+  <div class="adventure-level-header reveal">
+    <span class="section-eyebrow">FIND YOUR PACE</span>
+
+    <h2>
+      How Wild Do You<br>
+      <span>Want To Go?</span>
+    </h2>
+
+    <p>
+      From slow escapes to demanding expeditions, choose an adventure
+      that matches your energy, experience and sense of discovery.
+    </p>
+  </div>
+
+
+  <div class="adventure-levels">
+
+    <!-- LEVEL 01 -->
+    <div class="level-card reveal-left">
+
+      <div class="level-image">
+        <img
+          src="images/img4.webp"
+          alt="Relaxed nature adventure"
+        >
+      </div>
+
+      <div class="level-overlay"></div>
+
+      <div class="level-number">01</div>
+
+      <div class="level-content">
+        <span>EASY GOING</span>
+
+        <h3>Slow Explorer</h3>
+
+        <p>
+          Scenic trails, peaceful coastlines and unforgettable moments
+          without rushing the journey.
+        </p>
+
+        <div class="level-meta">
+          <span>
+            <i class="fas fa-gauge-simple"></i>
+            Easy
+          </span>
+
+          <span>
+            <i class="fas fa-person-walking"></i>
+            Relaxed
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- LEVEL 02 -->
+    <div class="level-card level-featured reveal-zoom">
+
+      <div class="level-image">
+        <img
+          src="images/img29.webp"
+          alt="Hiking adventure"
+        >
+      </div>
+
+      <div class="level-overlay"></div>
+
+      <div class="level-number">02</div>
+
+      <div class="level-content">
+        <span>THE SWEET SPOT</span>
+
+        <h3>Wild Explorer</h3>
+
+        <p>
+          Mountain trails, jungle routes and active days designed for
+          travelers who want to go further.
+        </p>
+
+        <div class="level-meta">
+          <span>
+            <i class="fas fa-gauge-high"></i>
+            Moderate
+          </span>
+
+          <span>
+            <i class="fas fa-person-hiking"></i>
+            Active
+          </span>
+        </div>
+      </div>
+
+      <div class="level-featured-badge">
+        MOST POPULAR
+      </div>
+
+    </div>
+
+
+    <!-- LEVEL 03 -->
+    <div class="level-card reveal-right">
+
+      <div class="level-image">
+        <img
+          src="images/img30.webp"
+          alt="Extreme mountain adventure"
+        >
+      </div>
+
+      <div class="level-overlay"></div>
+
+      <div class="level-number">03</div>
+
+      <div class="level-content">
+        <span>FULL SEND</span>
+
+        <h3>Extreme Explorer</h3>
+
+        <p>
+          High-altitude climbs, remote wilderness and challenges built
+          for experienced adventurers.
+        </p>
+
+        <div class="level-meta">
+          <span>
+            <i class="fas fa-gauge-max"></i>
+            Hard
+          </span>
+
+          <span>
+            <i class="fas fa-mountain"></i>
+            Extreme
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ADVENTURE SCALE -->
+
+  <div class="adventure-scale reveal">
+
+    <div class="scale-label">
+      <span>RELAXED</span>
+      <span>EXTREME</span>
+    </div>
+
+    <div class="scale-line">
+
+      <div class="scale-progress"></div>
+
+      <div class="scale-marker marker-one">
+        <span></span>
+      </div>
+
+      <div class="scale-marker marker-two">
+        <span></span>
+      </div>
+
+      <div class="scale-marker marker-three">
+        <span></span>
+      </div>
+
+    </div>
+
+    <p>
+      Your adventure. Your pace. Your story.
+    </p>
+
+  </div>
+
+</section>
+
+  <!-- Section 4: Featured Destination Banner -->
+  <!-- <section class="featured-banner">
+    <div class="featured-banner-img">
+      <img src="https://images.pexels.com/photos/32598063/pexels-photo-32598063.jpeg?auto=compress&cs=tinysrgb&h=800&w=1920" alt="Costa Rica waterfall">
+    </div>
+    <div class="featured-banner-overlay"></div>
+    <div class="featured-banner-content reveal-left">
+      <span class="featured-label">FEATURED DESTINATION</span>
+      <h2>Costa Rica Waterfall Expedition</h2>
+      <p>Deep in the heart of the rainforest lies a world few have seen. Hike through lush canopies, swim beneath thundering waterfalls, and sleep in eco-lodges surrounded by nature. This is adventure at its purest.</p>
+      <ul class="featured-list">
+        <li><i class="fas fa-check-circle"></i> 6 days fully guided expedition</li>
+        <li><i class="fas fa-check-circle"></i> Eco-lodge accommodation included</li>
+        <li><i class="fas fa-check-circle"></i> All meals and transport provided</li>
+        <li><i class="fas fa-check-circle"></i> Professional wildlife photographer guide</li>
+      </ul>
+      <a href="#" class="featured-btn btn-shine ripple-effect">Book This Trip <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section> -->
+
+  <!-- Section 5: Stats Banner -->
+  <!-- <section class="stats-banner">
+    <div class="stats-banner-grid">
+      <div class="stat-banner-item reveal-zoom" style="transition-delay:0s">
+        <i class="fas fa-globe-americas"></i>
+        <h3 data-count="50">0</h3>
+        <p>Countries Covered</p>
+      </div>
+      <div class="stat-banner-item reveal-zoom" style="transition-delay:0.1s">
+        <i class="fas fa-user-check"></i>
+        <h3 data-count="8500">0</h3>
+        <p>Travelers Satisfied</p>
+      </div>
+      <div class="stat-banner-item reveal-zoom" style="transition-delay:0.2s">
+        <i class="fas fa-map-marked-alt"></i>
+        <h3 data-count="150">0</h3>
+        <p>Active Routes</p>
+      </div>
+      <div class="stat-banner-item reveal-zoom" style="transition-delay:0.3s">
+        <i class="fas fa-award"></i>
+        <h3 data-count="15">0</h3>
+        <p>Industry Awards</p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Section 6: Call to Action -->
+  <section class="dest-cta">
+    <div class="dest-cta-content reveal">
+      <h2>Can't Decide Where To Go?</h2>
+      <p>Let our adventure experts help you plan the perfect trip based on your interests, budget, and travel style.</p>
+      <a href="error.html" class="cta-btn btn-shine ripple-effect">Get Personalized Advice <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo.webp" alt="Stackly Logo">
+        </a>
+
+        <p>Your trusted partner for extraordinary adventures around the globe. We turn travel dreams into reality.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="adventures.html">Adventures</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Adventure Types</h4>
+        <ul>
+          <li><a href="adventures.html">Hiking & Trekking</a></li>
+          <li><a href="adventures.html">Water Sports</a></li>
+          <li><a href="adventures.html">Paragliding</a></li>
+          <li><a href="adventures.html">Camping</a></li>
+          <li><a href="adventures.html">Desert Safari</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Adventure St, Denver, CO</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> hello@Stackly.com</p>
+        <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 7PM</p>
+
+        <form class="newsletter-form">
+
+        <div class="newsletter-input">
+          <i class="fas fa-envelope"></i>
+          <input
+            type="email"
+            placeholder="Enter your email address"
+            required
+          >
+        </div>
+
+        <button type="submit">
+          Subscribe
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+      </form>
+      
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Stackly. All rights reserved. | Designed for Adventurers</p>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/destinations.js"></script>
+</body>
+</html>
