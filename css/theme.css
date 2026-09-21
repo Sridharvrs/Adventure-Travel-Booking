@@ -1577,7 +1577,7 @@ button { font-family: var(--font-body); cursor: pointer; border: none; outline: 
   /* Quick Links + Adventure Types */
   .footer-col:nth-child(2),
   .footer-col:nth-child(3) {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   /* Contact section full width */
