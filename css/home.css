@@ -3554,3 +3554,173 @@ input {
   }
 
 }
+
+/* ============================================
+   NEWSLETTER FORM
+   ============================================ */
+
+.cta-form {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  max-width: 680px;
+  margin: 30px auto 0;
+}
+
+/* Email Input Wrapper */
+.cta-form .newsletter-input {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.cta-form .newsletter-input i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d8b45a;
+  font-size: 17px;
+  pointer-events: none;
+}
+
+.cta-form .newsletter-input input {
+  width: 100%;
+  height: 58px;
+  padding: 0 20px 0 52px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.10);
+  color: #ffffff;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.cta-form .newsletter-input input::placeholder {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.cta-form .newsletter-input input:focus {
+  border-color: #d8b45a;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 3px rgba(216, 180, 90, 0.12);
+}
+
+/* Submit Button */
+.cta-form > button {
+  height: 58px;
+  padding: 0 26px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 1px solid #d8b45a;
+  border-radius: 8px;
+
+  background: #d8b45a;
+  color: #111111;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: all 0.3s ease;
+}
+
+.cta-form > button i {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.cta-form > button:hover {
+  background: #e7c875;
+  border-color: #e7c875;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(216, 180, 90, 0.25);
+}
+
+.cta-form > button:hover i {
+  transform: translateX(4px);
+}
+
+/* Newsletter Message */
+.cta-note {
+  min-height: 20px;
+  margin: 14px 0 0;
+
+  font-size: 13px;
+  color: #d8b45a;
+}
+
+/* Privacy Text */
+.cta-privacy {
+  display: block;
+  margin-top: 8px;
+
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+
+/* ============================================
+   MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .cta-form {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+  }
+
+  .cta-form .newsletter-input {
+    width: 100%;
+  }
+
+  .cta-form .newsletter-input input {
+    height: 54px;
+    font-size: 14px;
+  }
+
+  .cta-form > button {
+    width: 100%;
+    height: 54px;
+  }
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .cta-form {
+    margin-top: 24px;
+  }
+
+  .cta-form .newsletter-input input {
+    height: 52px;
+    padding-left: 48px;
+  }
+
+  .cta-form > button {
+    height: 52px;
+    font-size: 13px;
+  }
+
+  .cta-privacy {
+    font-size: 11px;
+  }
+}
