@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   const passToggle = document.getElementById("togglePassword");
-  const forgotLink = document.querySelector(".forgot-link");
+//   const forgotLink = document.querySelector(".forgot-link");
 
   const submitBtn = document.getElementById("loginSubmitBtn");
 
