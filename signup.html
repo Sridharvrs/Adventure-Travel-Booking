@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Stackly</title>
+
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/signup.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ============================================
+       SIGNUP PAGE
+  ============================================= -->
+
+  <section class="signup-page">
+
+
+<!-- ============================================
+     LEFT VISUAL PANEL
+============================================= -->
+
+<div class="signup-visual">
+
+  <div class="signup-visual-bg">
+    <img
+      src="images/img29.webp"
+      alt="Mountain adventure">
+  </div>
+
+  <div class="signup-visual-overlay"></div>
+
+  <div class="signup-visual-content">
+
+    <a href="index.html" class="signup-logo">
+      <i class="fas fa-mountain-sun"></i>
+      Stackly
+    </a>
+
+    <h2>
+      Start Your<br>
+      Wild Journey
+    </h2>
+
+    <p>
+      Create your account and discover unforgettable
+      adventures around the world.
+    </p>
+
+    <div class="signup-visual-features">
+
+      <div class="svf-item">
+        <i class="fas fa-compass"></i>
+        <span>Discover 150+ destinations</span>
+      </div>
+
+      <div class="svf-item">
+        <i class="fas fa-route"></i>
+        <span>Explore 150+ curated adventures</span>
+      </div>
+
+      <div class="svf-item">
+        <i class="fas fa-users"></i>
+        <span>Join 8,500+ adventure travelers</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ============================================
+     RIGHT SIGNUP PANEL
+============================================= -->
+
+<div class="signup-form-side">
+
+  <!-- Close / Back Button -->
+  <a
+    href="index.html"
+    class="signup-close-btn"
+    title="Back to Home"
+    aria-label="Back to Home"
+  >
+    <i class="fas fa-times"></i>
+  </a>
+
+
+  <div class="signup-form-container">
+
+    <h1>Create Account</h1>
+
+    <p class="signup-subtitle">
+      Choose your role and create your Stackly account
+    </p>
+
+
+    <!-- ============================================
+         ROLE SELECTOR
+    ============================================= -->
+
+    <div class="role-selector">
+
+      <button
+        type="button"
+        class="role-card active"
+        data-role="traveler"
+      >
+        <i class="fas fa-user"></i>
+
+        <div>
+          <strong>Traveler</strong>
+          <span>Book adventures</span>
+        </div>
+      </button>
+
+
+      <button
+        type="button"
+        class="role-card"
+        data-role="guide"
+      >
+        <i class="fas fa-map-marked-alt"></i>
+
+        <div>
+          <strong>Guide</strong>
+          <span>Lead expeditions</span>
+        </div>
+      </button>
+
+    </div>
+
+
+    <!-- ============================================
+         MESSAGE
+    ============================================= -->
+
+    <div
+      id="signupMessage"
+      class="signup-message"
+      hidden
+    ></div>
+
+
+    <!-- ============================================
+         SIGNUP FORM
+    ============================================= -->
+
+    <form
+      class="signup-form"
+      id="signupForm"
+    >
+
+      <!-- Full Name -->
+
+      <div class="form-group">
+
+        <label for="name">
+          Full Name
+        </label>
+
+        <div class="input-wrap">
+
+          <i class="fas fa-user"></i>
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- Email -->
+
+      <div class="form-group">
+
+        <label for="email" id="emailLabel">
+          Email Address
+        </label>
+
+        <div class="input-wrap">
+
+          <i class="fas fa-envelope"></i>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- Password -->
+
+      <div class="form-group">
+
+        <label for="password">
+          Password
+        </label>
+
+        <div class="input-wrap">
+
+          <i class="fas fa-lock"></i>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Create a strong password"
+            autocomplete="new-password"
+            required
+          >
+
+          <button
+            type="button"
+            class="toggle-password"
+            id="togglePassword"
+            aria-label="Show password"
+          >
+            <i class="fas fa-eye"></i>
+          </button>
+
+        </div>
+
+
+        <!-- Password Strength -->
+
+        <div class="password-strength">
+
+          <div class="strength-bar">
+            <span
+              class="strength-fill"
+              id="strengthFill"
+            ></span>
+          </div>
+
+          <span
+            class="strength-text"
+            id="strengthText"
+          >
+            Enter a password
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- Confirm Password -->
+
+      <div class="form-group">
+
+        <label for="confirmPassword">
+          Confirm Password
+        </label>
+
+        <div class="input-wrap">
+
+          <i class="fas fa-lock"></i>
+
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+            autocomplete="new-password"
+            required
+          >
+
+          <button
+            type="button"
+            class="toggle-password"
+            id="toggleConfirmPassword"
+            aria-label="Show password"
+          >
+            <i class="fas fa-eye"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Terms -->
+
+      <label class="remember">
+
+        <input type="checkbox">
+
+        <span>
+          I agree to the
+          <a href="#">Terms</a>
+          &
+          <a href="#">Privacy Policy</a>
+        </span>
+
+      </label>
+
+
+      <!-- Submit -->
+
+      <button
+        type="submit"
+        class="signup-submit"
+      >
+        Create Account
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+    </form>
+
+
+    <!-- ============================================
+         DIVIDER
+    ============================================= -->
+
+    <div class="signup-divider">
+      <span>or continue with</span>
+    </div>
+
+
+    <!-- ============================================
+         SOCIAL SIGNUP
+    ============================================= -->
+
+    <div class="social-login">
+
+      <button
+        type="button"
+        class="social-btn"
+      >
+        <i class="fab fa-google"></i>
+        Google
+      </button>
+
+      <button
+        type="button"
+        class="social-btn"
+      >
+        <i class="fab fa-facebook-f"></i>
+        Facebook
+      </button>
+
+    </div>
+
+
+    <!-- ============================================
+         LOGIN LINK
+    ============================================= -->
+
+    <p class="login-link">
+      Already have an account?
+      <a href="login.html">
+        Sign in
+      </a>
+    </p>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <script src="js/theme.js"></script>
+
+  <script src="js/signup.js"></script>
+
+</body>
+</html>
